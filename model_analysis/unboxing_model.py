@@ -7,13 +7,13 @@ from itertools import permutations
 import sys
 base = '/home3/ebrahim/isr/'
 sys.path.append(base)
-from model import RNN_feedback
-from sklearn.linear_model import LinearRegression, Ridge
+from RNNcell import RNN_one_layer, RNN_two_layers
+from RNN_feedback import RNN_feedback
+from sklearn.linear_model import Ridge
 from sklearn.preprocessing import OneHotEncoder
 from sklearn.metrics import r2_score
 matplotlib.use('Agg')
 from matplotlib import pyplot as plt
-from skimage.measure import block_reduce
 from scipy.stats import pearsonr
 import pandas as pd
 import seaborn as sns
@@ -21,20 +21,17 @@ import os
 import pickle
 import argparse
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument('--rn', type=str, 
                     help="run number corresponding to model used for analyses")
-parser.add_argument('--folder', type=str, default='simulation_one_weights/',
-                    help="Folder where model is saved")
-parser.add_argument('--save_folder', type=str, default='unboxing_model/',
-                    help="Folder to save output")
-                    
+parser.add_argument('--mt', type=int, default=1,
+                    help="0 for RNN with feedback, 1 for one layer RNN, 2 for two layer RNN")
+                                
 
 args = parser.parse_args()
-
 run_number = args.rn
-model_folder = args.folder
-save_folder = args.save_folder
+mt = args.mt
 
 class Regression_Trials(Dataset):
 
@@ -87,7 +84,7 @@ def inverse_sigmoid(y):
     '''
     return torch.log(y/(1-y))
 
-def regression_RNN_activity(model, dataloader, batch_size):
+def regression_RNN_activity(model, dataloader, batch_size, loss_func):
 
     model.eval()
 
@@ -99,11 +96,29 @@ def regression_RNN_activity(model, dataloader, batch_size):
             X = X.to(device)
             y = y.to(device)
 
-            x, r, y_hat = model.init_states(batch_size, device)
+            if mt == 0:
+                x, h, y_hat = model.init_states(X.shape[0], device)
+            else: 
+                y_hat, h = model.init_states(X.shape[0], device)
 
-            for timestep in range(X.shape[1]-1):
-                y_hat, x, r = model(X[:, timestep, :], x, r, y_hat)
-                hidden_arr.append(inverse_sigmoid(r))
+            model.eval()
+            with torch.no_grad():
+                for timestep in range(X.shape[1]-1):
+                    if mt == 0:
+                        y_hat, x, h = model(X[:, timestep, :], x, h, y_hat)
+                    else:
+                        y_hat, h = model(X[:, timestep, :], h, y_hat)
+
+                    if loss_func == 'ce':
+                        y_hat = torch.softmax(y_hat, dim=1)
+
+                    if nonlin == 'linear':
+                        hidden_arr.append(h)
+                    elif nonlin == 'sigmoid':
+                        if mt == 2:
+                            hidden_arr.append(inverse_sigmoid(h[1]))
+                        else: 
+                            hidden_arr.append(inverse_sigmoid(h))
             
     return torch.stack(hidden_arr)
 
@@ -220,8 +235,6 @@ def figure_4_code(W_encoding, ls):
     c_same = [c1, c2, c3]
     c_diff = [c0_n, c1_n, c2_n, c3_n]
 
-    print("Same item positional correlations: ", np.mean(np.stack(c_same),axis=1))
-    print("Distinct item positional correlations: ", np.mean(np.stack(c_diff),axis=1))
 
     np.save(save_path + 'positional_corr_same', np.stack(c_same))
     np.save(save_path + 'positional_corr_diff', np.stack(c_diff))
@@ -246,20 +259,53 @@ def figure_5_code(MA):
 
 # set device
 device = torch.device("cuda:0")
+base = '/home3/ebrahim/isr/'
+
+if mt == 0:
+    nonlin = 'sigmoid'
+    model_folder = 'simulation_one_weights/'
+    path = base + 'saved_models/' + model_folder + 'run_' + run_number + '/'
+    with open(path + 'model_settings.pkl', 'rb') as handle:
+        ms = pickle.load(handle)
+    model = RNN_feedback(ms['is'], ms['hs'], ms['os'])
+    save_folder = model_folder
+
+elif mt == 1: 
+    model_folder = 'simulation_one_cell/'
+    path = base + 'saved_models/' + model_folder + 'run_' + run_number + '/'
+    with open(path + 'model_settings.pkl', 'rb') as handle:
+        ms = pickle.load(handle)
+    try:
+        nonlin = ms['nonlin']
+    except:
+        nonlin = 'sigmoid'
+
+    model = RNN_one_layer(ms['is'], ms['hs'], ms['os'], ms['feedback_scaling'], nonlin)
+    save_folder = model_folder
+
+else:
+    model_folder = 'simulation_one_cell/'
+    path = base + 'saved_models/' + model_folder + 'run_' + run_number + '/'
+    with open(path + 'model_settings.pkl', 'rb') as handle:
+        ms = pickle.load(handle)
+    nonlin = ms['nonlin']
+    model = RNN_two_layers(ms['is'], ms['hs'], ms['os'], ms['feedback_scaling'], nonlin, ms['fb_type'])
+    save_folder = model_folder
 
 # specify folder for saving output
 save_path = 'saved_data/' + save_folder + 'run_' + run_number + '/'
 os.makedirs(save_path, exist_ok=True)
 
-base = '/home3/ebrahim/isr/'
-path = base + 'saved_models/' + model_folder + 'run_' + run_number + '/'
-
-
 # create permutations of specified list length with a given subset of letters
-#letters_subset = [0,1,4,7,10,13,16,19,22,25]
-letters_subset = [0, 1, 4, 7, 9]
+num_letters = 10
+
+if num_letters == 10:
+    letters_subset = [0, 1, 4, 7, 9]
+else:
+    letters_subset = [0,1,4,7,10,13,16,19,22,25]
+
 list_length = 4
-rt = Regression_Trials(10, letters_subset, list_length)
+rt = Regression_Trials(num_letters, letters_subset, list_length)
 rt_dataloader = DataLoader(rt, batch_size=len(rt), shuffle=False)
 
 # convert to one hot encoding, X_transform has shape num_permutations X num_features
@@ -267,37 +313,39 @@ X_reg = rt.X_reg
 enc = OneHotEncoder(sparse=False)
 X_transform = enc.fit_transform(X_reg.T)
 
-# load model
-with open(path + 'model_settings.pkl', 'rb') as handle:
-    ms = pickle.load(handle)
-model = RNN_feedback(ms['is'], ms['hs'], ms['os'], ms['init_wrec'], ms['alpha_s'], 
-ms['alpha_r'], ms['feedback_scaling'])
-
-if run_number == '13':
-    model.load_state_dict(torch.load(path + '29_model_weights.pth'))
-else:
-    model.load_state_dict(torch.load(path + 'final_model_weights.pth'))
+model.load_state_dict(torch.load(path + 'final_model_weights.pth'))
 model.to(device)
 
 # obtain linearized model activity 
-linearized_hidden_activity = regression_RNN_activity(model, rt_dataloader, len(rt))
+linearized_hidden_activity = regression_RNN_activity(model, rt_dataloader, len(rt), ms['loss_func'])
 linearized_hidden_activity = linearized_hidden_activity.cpu().numpy()
+
+
 
 # obtain output weights for the subset of letters
 for name, param in model.named_parameters():
     if name == 'h2o.weight':
         h2o_weight = param.detach().cpu().numpy()
-h2o_weight_subset = h2o_weight[letters_subset]
+    if name == 'o2h.weight' or name == 'RNN.o2h.weight' or name == 'RNN2.o2h.weight':
+        o2h_weight = param.detach().cpu().numpy()
 
+h2o_weight_subset = h2o_weight[letters_subset]
 plt.hist(np.ravel(h2o_weight_subset))
 plt.savefig(save_path + 'h2o_weights', dpi=400, bbox_inches='tight')
+plt.close()
+
+o2h_weight_subset = o2h_weight[letters_subset]
+plt.hist(np.ravel(o2h_weight_subset))
+plt.savefig(save_path + 'o2h_weights', dpi=400, bbox_inches='tight')
 plt.close()
 
 MA = []
 for t in [1,2,3,4,5,6,7,8]:
     MA.append([])
     r2_score_value, W = compute_element_vectors(X_transform, linearized_hidden_activity, 
-    len(letters_subset), t, 10)
+    len(letters_subset), t, num_letters)
+    print("t: ", t)
+    print("R2 score: ", r2_score_value)
     partition_W(W, len(letters_subset), MA)
     if t == 4:
         W_encoding = W

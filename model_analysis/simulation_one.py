@@ -12,23 +12,21 @@ import pandas as pd
 import seaborn as sns
 import os
 import pickle
-from model import LSTMCELL, RNN_feedback
+from RNNcell import RNN_one_layer, RNN_two_layers
+from RNN_feedback import RNN_feedback
 import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--rn', type=str, 
                     help="run number corresponding to model used for analyses")
-parser.add_argument('--folder', type=str, default='simulation_one_weights/',
-                    help="Folder where model is saved")
-parser.add_argument('--save_folder', type=str, default='simulation_one_weights/',
-                    help="Folder to save output")
+parser.add_argument('--mt', type=int, default=1,
+                    help="0 for RNN with feedback, 1 for one layer RNN, 2 for two layer RNN")
+                     
                     
 
 args = parser.parse_args()
-
 run_number = args.rn
-model_folder = args.folder
-save_folder = args.save_folder
+mt = args.mt
 
 
 class simulation_one():
@@ -43,7 +41,7 @@ class simulation_one():
         self.ppr_list = []
         self.list_length = []
 
-    def run_model(self, device, dataloader, test_list_length):
+    def run_model(self, device, dataloader, test_list_length, loss_func):
 
         self.model.to(device)
 
@@ -55,14 +53,23 @@ class simulation_one():
             X_test = X_test.to(device)
             y_test = y_test.to(device)
 
-            x, r, y_hat = self.model.init_states(X_test.shape[0], device)
-
+            if mt == 0:
+                x, r, y_hat = model.init_states(X_test.shape[0], device)
+            else: 
+                y_hat, h = model.init_states(X_test.shape[0], device)
             model.eval()
 
             with torch.no_grad():
                 # iterate to 2nd to last input (b/c ignoring end of list cue)
                 for timestep in range(X_test.shape[1]-1):
-                    y_hat, x, r = self.model(X_test[:, timestep, :], x, r, y_hat)
+                    if mt == 0:
+                        y_hat, x, r = self.model(X_test[:, timestep, :], x, r, y_hat)
+                    else:
+                        y_hat, h = self.model(X_test[:, timestep, :], h, y_hat)
+
+                        if loss_func == 'ce':
+                            y_hat = torch.softmax(y_hat, dim=1)
+
                     if timestep >= test_list_length:
                         y_hat_all.append(y_hat)
 
@@ -164,18 +171,38 @@ class simulation_one():
 
 ###################### run code ###########################
 base = '/home3/ebrahim/isr/'
-path = base + 'saved_models/' + model_folder + 'run_' + run_number + '/'
 
-with open(path + 'model_settings.pkl', 'rb') as handle:
-    ms = pickle.load(handle)
-print(ms)
-model = RNN_feedback(ms['is'], ms['hs'], ms['os'], ms['init_wrec'], ms['alpha_s'], 
-ms['alpha_r'], ms['feedback_scaling'])
+if mt == 0:
+    model_folder = 'simulation_one_weights/'
+    path = base + 'saved_models/' + model_folder + 'run_' + run_number + '/'
+    with open(path + 'model_settings.pkl', 'rb') as handle:
+        ms = pickle.load(handle)
+    model = RNN_feedback(ms['is'], ms['hs'], ms['os'])
+    save_folder = model_folder
 
-if run_number == '13':
-    model.load_state_dict(torch.load(path + '29_model_weights.pth'))
-else:
-    model.load_state_dict(torch.load(path + 'final_model_weights.pth'))
+elif mt == 1: 
+    model_folder = 'simulation_one_cell/'
+    path = base + 'saved_models/' + model_folder + 'run_' + run_number + '/'
+    with open(path + 'model_settings.pkl', 'rb') as handle:
+        ms = pickle.load(handle)
+
+    try:
+        nonlin = ms['nonlin']
+    except:
+        nonlin = 'sigmoid'
+    model = RNN_one_layer(ms['is'], ms['hs'], ms['os'], ms['feedback_scaling'], nonlin)
+    save_folder = model_folder
+
+elif mt == 2:
+    model_folder = 'simulation_one_cell/'
+    path = base + 'saved_models/' + model_folder + 'run_' + run_number + '/'
+    with open(path + 'model_settings.pkl', 'rb') as handle:
+        ms = pickle.load(handle)
+    model = RNN_two_layers(ms['is'], ms['hs'], ms['os'], ms['feedback_scaling'], ms['nonlin'], ms['fb_type'])
+    save_folder = model_folder
+
+
+model.load_state_dict(torch.load(path + 'final_model_weights.pth'))
 
 device = torch.device("cuda:0")
 test_size = 5000
@@ -190,6 +217,6 @@ sim_one = simulation_one(model, save_path)
 for ll in range(4, 10, 1):
     test_dataloader = DataLoader(OneHotLetters(ll, None, num_letters=num_letters,
                                     test_mode=True, num_test_trials=test_size), batch_size=test_size, shuffle=False)
-    sim_one.run_model(device, test_dataloader, ll)
+    sim_one.run_model(device, test_dataloader, ll, ms['loss_func'])
 
 

@@ -47,14 +47,13 @@ class OneHotLetters(Dataset):
         # letters (selected from 0-25)
         # recall cue (26) for remainder of input
         letters = rng.choice(self.num_letters, list_length, replace=False) 
-        recall_cue = np.ones(list_length) * self.num_letters 
+        recall_cue = np.ones(list_length+1) * self.num_letters 
         X = torch.nn.functional.one_hot(torch.from_numpy(np.hstack((letters, recall_cue))).to(torch.long),
         num_classes=self.num_letters+1)
         
         # output is letters during letter presentation
         # letters again after recall cue
         # and finally end of list cue 
-        y = torch.from_numpy(np.hstack((letters, letters)))
+        y = torch.from_numpy(np.hstack((letters, letters, self.num_letters)))
         y = torch.nn.functional.one_hot(y, num_classes=self.num_letters+1)
         return X.to(torch.float32), y.to(torch.float32)
-
