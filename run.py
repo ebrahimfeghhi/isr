@@ -10,36 +10,30 @@ import wandb
 import argparse
 from simulation_one import simulation_one
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--rn', type=str, 
-                    help="run number corresponding to model used for analyses")
-
-args = parser.parse_args()
-
-rn = args.rn
-
 device = torch.device("cuda:0")
 
-# generate training + testing data
-training_settings = {
+# set settings
+settings = {
     'max_length' : 9, 
     'test_list_length': 6, 
     'num_cycles': 200000,
     'train_batch': 1,
     'test_size': 5000,
-    'num_letters': 10,
+    'num_letters': 26,
     'hs': 200,
     'lr': 0.001,
-    'stopping_criteria': .58,
+    'stopping_criteria': 0.58,
     'feedback_scaling': 1.0,
     'opt': 'SGD',
+    'momentum': .9,
     'nonlin': 'sigmoid',
     'clipping': False, 
-    'clip_factor': 10}
+    'clip_factor': 10
+}
 
-def train_loop(save_path, checkpoint_epoch=10000):
+def train_loop(checkpoint_epoch=10000):
 
-    wandb.init(project="serial_recall_RNNs", config=training_settings)
+    wandb.init(project="serial_recall_RNNs", config=settings)
     input_size = output_size = wandb.config['num_letters'] + 1
 
     loss_list = []
@@ -55,11 +49,9 @@ def train_loop(save_path, checkpoint_epoch=10000):
 
     model = model.to(device)
 
-    wandb.watch(model, log='all', log_freq=10000)
+    wandb.watch(model, log='all', log_freq=checkpoint_epoch)
 
-    optimizer = torch.optim.SGD(model.parameters(), lr=wandb.config['lr'])
-
-    os.makedirs(save_path, exist_ok=True)
+    optimizer = torch.optim.SGD(model.parameters(), lr=wandb.config['lr'], momentum=wandb.config['momentum'])
 
     model.train()
     loss_per_1000 = 0.0
@@ -100,6 +92,7 @@ def train_loop(save_path, checkpoint_epoch=10000):
 
         # print model loss every 1000 trials 
         if batch_idx % 1000 == 0 and batch_idx != 0:
+
             print("Batch number: ", batch_idx)
             loss_per_1000 /= 1000
             if batch_idx != 0:
@@ -108,17 +101,19 @@ def train_loop(save_path, checkpoint_epoch=10000):
             loss_per_1000 = 0.0
 
         if batch_idx % checkpoint_epoch == 0:
+
             # check accuracy every checkpoint_epoch trials and save model
-            sim_one = simulation_one(model, save_path, wandb.config['test_size'], wandb.config['max_length'])
-            sim_one = checkpoint(sim_one)
-            wandb.log({'accuracy': sim_one.ppr_six})
-            print("Accuracy: ", round(sim_one.ppr_six,5))
+            sim_one = simulation_one(model, wandb.config['test_size'], wandb.config['max_length'])
+            sim_one_checkpoint = checkpoint(sim_one)
+            sim_one_checkpoint.log_metrics(wandb)
+            wandb.log({'accuracy': sim_one_checkpoint.ppr_six})
+            print("Accuracy: ", round(sim_one_checkpoint.ppr_six,5))
 
         if sim_one.met_accuracy == True or torch.isnan(loss):
-            torch.save(model.state_dict(), save_path + 'final_model_weights.pth')
-            sim_one.figure_six_plot(wandb)
-            sim_one.figure_seven_plot(wandb)
-            sim_one.save_metrics(wandb)
+
+            torch.save(model.state_dict(), os.path.join(wandb.run.dir, 'final_model_weights.pth'))
+            sim_one_checkpoint.figure_six_plot(wandb)
+            sim_one_checkpoint.figure_seven_plot(wandb)
             break
 
 def checkpoint(sim_one):
@@ -130,18 +125,12 @@ def checkpoint(sim_one):
                                     batch_size=wandb.config['test_size'], shuffle=False)
         sim_one.run_model(device, test_dataloader, ll)
 
-        if ll == 6 and sim_one.ppr > wandb.config['stopping_criteria']:
-            sim_one.met_accuracy = True 
+    if sim_one.ppr_six > wandb.config['stopping_criteria']:
+        sim_one.met_accuracy = True 
         
-        return sim_one
+    return sim_one
 
-def main(rn):
-    save_path = 'saved_models/simulation_one_cell/run_' + rn + '/'
-    os.makedirs(save_path, exist_ok=True)
-    
-    train_loop(save_path)
-
-
+train_loop()
 
 
 

@@ -22,24 +22,18 @@ run_number = args.rn
 
 class simulation_one():
 
-    def __init__(self, model, save_path, num_trials, max_length, met_accuracy):
+    def __init__(self, model, num_trials, max_length):
 
         '''
         @param model: PyTorch model 
-        @param save_path: where to save output
         @param num_trials: number of trials used to test model
         @param max_length: longest list the model is tested on 
-        @parma met_accuracy (bool): True if accuracy threshold is met, otherwise false 
         '''
 
         self.model = model
-        self.save_path = save_path
         self.num_trials = num_trials
         self.max_length = max_length
-        self.met_accuracy = met_accuracy
-
-        os.makedirs(save_path, exist_ok=True)
-
+        self.met_accuracy = False
         self.ppr_list = [] # Proportion perfectly recalled
         self.ppr_six = 0 # ppr on lists of length six 
         self.list_length = []
@@ -158,10 +152,7 @@ class simulation_one():
 
                                 # if it is found in the position right after, then we have a relative error
                                 if matched_pt_next - matched_pt == 1:
-                                    relative_errors += 1
-                                    print("Pred: ", self.y_hat_recall[trial])
-                                    print("TARGET: ", self.y_test_recall[trial])
-                                    
+                                    relative_errors += 1            
 
                                 # otherwise, no relative_error
                                 else:
@@ -181,7 +172,6 @@ class simulation_one():
         ax.plot(self.list_length, self.ppr_list, marker='o')
         ax.set_xlabel("List lengths")
         ax.set_ylabel("Accuracy")
-        plt.savefig(self.save_path + 'fig6', dpi=400, bbox_inches='tight')
         wandb.log({'ppr_plot': fig})
         plt.close()
 
@@ -200,17 +190,13 @@ class simulation_one():
                 sns.despine(left=True, ax=ax[i])
         plt.subplots_adjust(wspace=0, hspace=0)
         plt.text(-15, -.1, 'Position', fontsize=24)
-        wandb.log({'transposition_plot': fig})
+        wandb.log({'transposition_plot': wandb.Image(fig)})
         plt.close()
 
     def save_metrics(self, wandb):
 
-        metrics = {}
-        metrics['ARD'] = self.ARD
-        metrics['R/T'] = self.R_T
-        metrics['ppr_six'] = self.ppr_six
-        metrics['relative_error_ratios'] = self.relative_error_ratio_list
+        wandb.log({'ARD':self.ARD, 'R/T': self.R_T, 'ppr_six': self.ppr_six, 
+        'relative_error_ratios': np.mean(self.relative_error_ratio_list)})
 
-        wandb.log({'metrics': metrics})
 
 
