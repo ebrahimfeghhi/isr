@@ -1,88 +1,66 @@
 from logging import logProcesses
 import os
 import torch 
-import torch.nn as nn
 from torch.utils.data import DataLoader
 import numpy as np
 from datasets import OneHotLetters
-import pickle
-import sys
-sys.path.append('/home3/ebrahim/isr/models/')
-from RNNcell import RNN_one_layer, RNN_two_layers
+from RNNcell import RNN_one_layer
 torch.set_num_threads(4)
 import wandb
+import argparse
+from simulation_one import simulation_one
 
-# generate training + testing data
-list_length = 9 # length of longest list 
-test_list_length = 6 # only test on lists of length 6
-num_cycles = 200000
-train_batch = 1
-test_size = 5000
-num_letters = 10
-hs = 200
-loss_func = 'ce'
-lr = 0.001
-stopping_criteria = .58
-feedback_scaling = 1.0
-opt = 'SGD'
-mt = 1
-nonlin = 'sigmoid'
-clipping = False
-clip_factor_arr = 10
-eps = 1e-7
-fb_type = 0 
+parser = argparse.ArgumentParser()
+parser.add_argument('--rn', type=str, 
+                    help="run number corresponding to model used for analyses")
 
-# init model
-input_size = output_size = num_letters + 1
+args = parser.parse_args()
+
+rn = args.rn
+
 device = torch.device("cuda:0")
 
-'''
-wandb.init(project="my-test-project", config={'is':input_size, 'hs':hs, 'os':output_size, 'lr':lr, 'loss_func': loss_func,
-    'optimizer':opt, 'stopping_criteria':stopping_criteria, 'feedback_scaling':feedback_scaling, 
-    'nonlin': nonlin, 'clipping': clipping, 'clip_factor': clip_factor, 'list_length': list_length, 
-    'test_list_length': test_list_length})
-'''
+# generate training + testing data
+training_settings = {
+    'max_length' : 9, 
+    'test_list_length': 6, 
+    'num_cycles': 200000,
+    'train_batch': 1,
+    'test_size': 5000,
+    'num_letters': 10,
+    'hs': 200,
+    'lr': 0.001,
+    'stopping_criteria': .58,
+    'feedback_scaling': 1.0,
+    'opt': 'SGD',
+    'nonlin': 'sigmoid',
+    'clipping': False, 
+    'clip_factor': 10}
 
-def train_loop(save_path, clip_factor, checkpoint_epoch=10000):
+def train_loop(save_path, checkpoint_epoch=10000):
 
-
-    model_settings = {'is':input_size, 'hs':hs, 'os':output_size, 'lr':lr, 'loss_func': loss_func,
-    'optimizer':opt, 'stopping_criteria':stopping_criteria, 'feedback_scaling':feedback_scaling, 
-    'nonlin': nonlin, 'clipping': clipping, 'clip_factor': clip_factor, 'list_length': list_length, 
-    'test_list_length': test_list_length, 'fb_type':fb_type}
-
-    with open(save_path + 'model_settings.pkl', 'wb') as f:
-        pickle.dump(model_settings, f)
+    wandb.init(project="serial_recall_RNNs", config=training_settings)
+    input_size = output_size = wandb.config['num_letters'] + 1
 
     loss_list = []
-    accuracy_list = []
 
-    train_dataloader= DataLoader(OneHotLetters(list_length, num_cycles, num_letters=num_letters,
-                                test_mode=False), batch_size=train_batch, shuffle=False)
-    test_dataloader = DataLoader(OneHotLetters(test_list_length, None, num_letters=num_letters,     
-                                test_mode=True), batch_size=test_size, shuffle=False)
-
+    train_dataloader= DataLoader(OneHotLetters(wandb.config['max_length'], wandb.config['num_cycles'], 
+                                num_letters=wandb.config['num_letters'], test_mode=False), 
+                                batch_size=wandb.config['train_batch'], shuffle=False)
 
     loss_fn = torch.nn.CrossEntropyLoss()
 
-    if mt == 1:
-        model = RNN_one_layer(input_size, hs, output_size, feedback_scaling, nonlin)
-    else:
-        model = RNN_two_layers(input_size, hs, output_size, feedback_scaling, nonlin, fb_type)
+    model = RNN_one_layer(input_size, wandb.config['hs'], 
+    output_size, wandb.config['feedback_scaling'], wandb.config['nonlin'])
 
     model = model.to(device)
 
-    #wandb.watch(model, log='all', log_freq=10000)
-    
-    if opt == 'Adam':
-        optimizer = torch.optim.Adam(model.parameters(), lr=lr)
-    elif opt == 'SGD':
-        optimizer = torch.optim.SGD(model.parameters(), lr=lr)
+    wandb.watch(model, log='all', log_freq=10000)
+
+    optimizer = torch.optim.SGD(model.parameters(), lr=wandb.config['lr'])
 
     os.makedirs(save_path, exist_ok=True)
 
-    save_number = 0
-    model
     model.train()
     loss_per_1000 = 0.0
 
@@ -92,7 +70,7 @@ def train_loop(save_path, clip_factor, checkpoint_epoch=10000):
         y = y.to(device)
 
         # Compute prediction and loss
-        y0, h0 = model.init_states(train_batch, device)
+        y0, h0 = model.init_states(wandb.config['train_batch'], device)
         
         loss = 0.0
 
@@ -113,12 +91,12 @@ def train_loop(save_path, clip_factor, checkpoint_epoch=10000):
         loss.backward()
 
         # ensure that norm of all gradients falls under clip_factor
-        if clipping: 
-            torch.nn.utils.clip_grad_norm_(model.parameters(), clip_factor)
+        if wandb.config['clipping']: 
+            torch.nn.utils.clip_grad_norm_(model.parameters(), wandb.config['clip_factor'])
 
         optimizer.step()
 
-        #wandb.log({'loss': loss})
+        wandb.log({'loss': loss})
 
         # print model loss every 1000 trials 
         if batch_idx % 1000 == 0 and batch_idx != 0:
@@ -131,81 +109,37 @@ def train_loop(save_path, clip_factor, checkpoint_epoch=10000):
 
         if batch_idx % checkpoint_epoch == 0:
             # check accuracy every checkpoint_epoch trials and save model
-            save_model_path = save_path + str(save_number) + '_'
-            accuracy = checkpoint(save_model_path, model, test_dataloader)
-            save_number += 1
-            accuracy_list.append(accuracy)
-            
-        if accuracy > stopping_criteria or torch.isnan(loss):
-            print("TRAINING IS DONE :)")
+            sim_one = simulation_one(model, save_path, wandb.config['test_size'], wandb.config['max_length'])
+            sim_one = checkpoint(sim_one)
+            wandb.log({'accuracy': sim_one.ppr_six})
+            print("Accuracy: ", round(sim_one.ppr_six,5))
+
+        if sim_one.met_accuracy == True or torch.isnan(loss):
             torch.save(model.state_dict(), save_path + 'final_model_weights.pth')
-            np.save(save_path + 'accuracy_list', accuracy_list)
+            sim_one.figure_six_plot(wandb)
+            sim_one.figure_seven_plot(wandb)
+            sim_one.save_metrics(wandb)
+            break
 
-            # append loss list with nan if training ends due to nan loss
-            if torch.isnan(loss):
-                np.save(save_path + 'loss_list_nan', loss_list)
-            else:
-                np.save(save_path + 'loss_list', loss_list)
-            break 
+def checkpoint(sim_one):
+    
+    for ll in range(4, wandb.config['max_length']+1, 1):
 
-def checkpoint(save_path, model, test_dataloader):
+        test_dataloader = DataLoader(OneHotLetters(ll, None, num_letters=wandb.config['num_letters'],
+                                    test_mode=True, num_test_trials=wandb.config['test_size']), 
+                                    batch_size=wandb.config['test_size'], shuffle=False)
+        sim_one.run_model(device, test_dataloader, ll)
 
-            '''
-            This function computes model accuracy on lists of a fixed size.
-            Unlike training, no teacher forcing is performed from o2h layer. 
-            In other words, y_hat (not y) from previous timestep is used.
-            Accuracy is computed only on the recall portion of the list,
-            ignoring the end of list cue. Accuracy indicates the proportion 
-            of lists perfectly recalled. 
+        if ll == 6 and sim_one.ppr > wandb.config['stopping_criteria']:
+            sim_one.met_accuracy = True 
+        
+        return sim_one
 
-            @param save_path (str): where to save model and accuracy
-            @param model (pytorch model): RNN used to generate predictions 
-            '''
-            model.eval()
-            y_hat_all = []
-
-            for X_test, y_test in test_dataloader:
-
-                X_test = X_test.to(device)
-                y_test = y_test.to(device)
-
-                y_hat, h = model.init_states(test_size, device)
-
-                with torch.no_grad():
-                    # iterate to 2nd to last input (b/c ignoring end of list cue)
-                    for timestep in range(X_test.shape[1]-1):
-                        y_hat, h = model(X_test[:, timestep, :], h, y_hat)
-
-                        y_hat = torch.softmax(y_hat, dim=1)
-
-                        # recall phase
-                        if timestep >= test_list_length:
-                            y_hat_all.append(y_hat)
-
-                    accuracy = compute_accuracy(torch.stack(y_hat_all, axis=1), y_test[:, test_list_length:-1, :])
-
-            model.train()
-            
-            # save model and accuracy
-            torch.save(model.state_dict(), save_path + 'model_weights.pth')
-            print("Accuracy: ", accuracy.item())
-            return accuracy.item()
-
-def compute_accuracy(y_hat, y_test):
-
-    '''
-    Computes the fraction of lists that were perfectly recalled. 
-    @param y_hat (Tensor): model predictions for all batches
-    @param y_test (Tensor): target outputs 
-    '''
-    predictions = y_hat[:, :, :-1].argmax(2) # batch_size x recall timesteps (ignoring end of list input)
-    targets = y_test.argmax(2) # batch_size x recall timesteps
-    return torch.all(torch.eq(predictions, targets), dim=1).sum() / y_test.shape[0]
-
-rn = '29'
-save_path = 'saved_models/simulation_one_cell/run_' + rn + '/'
-os.makedirs(save_path, exist_ok=True)
-train_loop(save_path)
+def main(rn):
+    save_path = 'saved_models/simulation_one_cell/run_' + rn + '/'
+    os.makedirs(save_path, exist_ok=True)
+    
+    train_loop(save_path)
 
 
 

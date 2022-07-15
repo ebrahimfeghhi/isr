@@ -1,0 +1,23 @@
+{
+    "os": "Linux-5.13.0-48-generic-x86_64-with-glibc2.29",
+    "python": "3.8.10",
+    "heartbeatAt": "2022-07-14T16:52:33.043400",
+    "startedAt": "2022-07-14T16:52:31.968924",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 3090",
+    "gpu_count": 3,
+    "cpu_count": 48,
+    "cuda": null,
+    "args": null,
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/ebrahimfeghhi/isr.git",
+        "commit": "f6d97e451c09eb07e5ffa76109138fd982aa9fa7"
+    },
+    "email": "efeghhi@gmail.com",
+    "root": "/home3/ebrahim/isr",
+    "host": "obiwan",
+    "username": "ebrahim",
+    "executable": "/bin/python"
+}
