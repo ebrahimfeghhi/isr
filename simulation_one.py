@@ -193,10 +193,9 @@ class simulation_one():
         wandb.log({'transposition_plot': wandb.Image(fig)})
         plt.close()
 
-    def save_metrics(self, wandb):
+    def log_metrics(self, wandb):
 
-        wandb.log({'ARD':self.ARD, 'R/T': self.R_T, 'ppr_six': self.ppr_six, 
-        'relative_error_ratios': np.mean(self.relative_error_ratio_list)})
+        wandb.log({'ARD':self.ARD, 'R_T': self.R_T, 'relative_error_ratios': np.mean(self.relative_error_ratio_list)})
 
 
 

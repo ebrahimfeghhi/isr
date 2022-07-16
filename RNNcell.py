@@ -1,3 +1,4 @@
+from pickle import FALSE
 import torch.nn as nn 
 import torch
 
@@ -59,7 +60,8 @@ class RNN_one_layer(nn.Module):
 
     """ Multilayer RNN """
 
-    def __init__(self, input_size, hidden_size, output_size, feedback_scaling, nonlin='sigmoid'):
+    def __init__(self, input_size, hidden_size, output_size, feedback_scaling, 
+    nonlin='sigmoid'):
 
         """ Init model.
         @param data_size: Input size
@@ -73,6 +75,7 @@ class RNN_one_layer(nn.Module):
         self.RNN = RNNcell(input_size, hidden_size, output_size, feedback_scaling, nonlin)
 
         self.h2o = nn.Linear(hidden_size, output_size)
+
         nn.init.uniform_(self.h2o.weight, -1.0, 1.0)
         nn.init.uniform_(self.h2o.bias, -1.0, 1.0)
 

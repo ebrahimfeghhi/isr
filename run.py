@@ -2,36 +2,14 @@ from logging import logProcesses
 import os
 import torch 
 from torch.utils.data import DataLoader
-import numpy as np
 from datasets import OneHotLetters
 from RNNcell import RNN_one_layer
 torch.set_num_threads(4)
 import wandb
-import argparse
 from simulation_one import simulation_one
-
 device = torch.device("cuda:0")
 
-# set settings
-settings = {
-    'max_length' : 9, 
-    'test_list_length': 6, 
-    'num_cycles': 200000,
-    'train_batch': 1,
-    'test_size': 5000,
-    'num_letters': 26,
-    'hs': 200,
-    'lr': 0.001,
-    'stopping_criteria': 0.58,
-    'feedback_scaling': 1.0,
-    'opt': 'SGD',
-    'momentum': .9,
-    'nonlin': 'sigmoid',
-    'clipping': False, 
-    'clip_factor': 10
-}
-
-def train_loop(checkpoint_epoch=10000):
+def train_loop(settings, checkpoint_epoch=10000):
 
     wandb.init(project="serial_recall_RNNs", config=settings)
     input_size = output_size = wandb.config['num_letters'] + 1
@@ -88,8 +66,6 @@ def train_loop(checkpoint_epoch=10000):
 
         optimizer.step()
 
-        wandb.log({'loss': loss})
-
         # print model loss every 1000 trials 
         if batch_idx % 1000 == 0 and batch_idx != 0:
 
@@ -98,6 +74,7 @@ def train_loop(checkpoint_epoch=10000):
             if batch_idx != 0:
                 loss_list.append(round(loss_per_1000.item(), 5))
             print("Loss: ", round(loss_per_1000.item(), 5))
+            wandb.log({'loss: ': round(loss_per_1000.item(), 5)})
             loss_per_1000 = 0.0
 
         if batch_idx % checkpoint_epoch == 0:
@@ -106,8 +83,8 @@ def train_loop(checkpoint_epoch=10000):
             sim_one = simulation_one(model, wandb.config['test_size'], wandb.config['max_length'])
             sim_one_checkpoint = checkpoint(sim_one)
             sim_one_checkpoint.log_metrics(wandb)
-            wandb.log({'accuracy': sim_one_checkpoint.ppr_six})
-            print("Accuracy: ", round(sim_one_checkpoint.ppr_six,5))
+            wandb.log({'accuracy': sim_one_checkpoint.ppr_six.item()})
+            print("Accuracy: ", round(sim_one_checkpoint.ppr_six.item(),5))
 
         if sim_one.met_accuracy == True or torch.isnan(loss):
 
@@ -130,7 +107,26 @@ def checkpoint(sim_one):
         
     return sim_one
 
-train_loop()
+# set settings
+settings = {
+    'max_length' : 9, 
+    'test_list_length': 6, 
+    'num_cycles': 200000,
+    'train_batch': 1,
+    'test_size': 5000,
+    'num_letters': 11,
+    'hs': 200,
+    'lr': 0.001,
+    'stopping_criteria': 0.58,
+    'feedback_scaling': 1.0,
+    'opt': 'SGD',
+    'momentum': 0,
+    'nonlin': 'sigmoid',
+    'clipping': False, 
+    'clip_factor': 10
+}
+
+train_loop(settings)
 
 
 
