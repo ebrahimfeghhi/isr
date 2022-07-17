@@ -1,0 +1,2753 @@
+
+Accuracy:  0.0
+Batch number:  1000
+Loss:  290.48734
+Batch number:  2000
+Loss:  235.1723
+Batch number:  3000
+Loss:  214.53999
+Batch number:  4000
+Loss:  196.83176
+Batch number:  5000
+Loss:  179.11493
+Batch number:  6000
+Loss:  164.46587
+Batch number:  7000
+Loss:  150.93086
+Batch number:  8000
+Loss:  138.33395
+Batch number:  9000
+Loss:  129.02585
+Batch number:  10000
+Loss:  121.77749
+Accuracy:  0.0
+Batch number:  11000
+Loss:  114.0619
+Batch number:  12000
+Loss:  110.09377
+Batch number:  13000
+Loss:  105.36634
+Batch number:  14000
+Loss:  102.26757
+Batch number:  15000
+Loss:  99.21377
+Batch number:  16000
+Loss:  97.5175
+Batch number:  17000
+Loss:  95.83457
+Batch number:  18000
+Loss:  93.56914
+Batch number:  19000
+Loss:  92.53803
+Batch number:  20000
+Loss:  91.70194
+Accuracy:  0.0
+Batch number:  21000
+Loss:  90.52261
+Batch number:  22000
+Loss:  90.05302
+Batch number:  23000
+Loss:  88.62542
+Batch number:  24000
+Loss:  88.11898
+Batch number:  25000
+Loss:  87.36401
+Batch number:  26000
+Loss:  87.2879
+Batch number:  27000
+Loss:  86.62463
+Batch number:  28000
+Loss:  86.4557
+Batch number:  29000
+Loss:  85.68702
+Batch number:  30000
+Loss:  84.88612
+Accuracy:  0.0
+Batch number:  31000
+Loss:  84.67325
+Batch number:  32000
+Loss:  83.97792
+Batch number:  33000
+Loss:  83.6259
+Batch number:  34000
+Loss:  83.38822
+Batch number:  35000
+Loss:  82.5863
+Batch number:  36000
+Loss:  82.38283
+Batch number:  37000
+Loss:  81.7686
+Batch number:  38000
+Loss:  81.22683
+Batch number:  39000
+Loss:  80.97626
+Batch number:  40000
+Loss:  80.29778
+Accuracy:  0.0
+Batch number:  41000
+Loss:  80.26151
+Batch number:  42000
+Loss:  79.86363
+Batch number:  43000
+Loss:  79.68996
+Batch number:  44000
+Loss:  79.37887
+Batch number:  45000
+Loss:  78.63889
+Batch number:  46000
+Loss:  78.03409
+Batch number:  47000
+Loss:  77.91187
+Batch number:  48000
+Loss:  77.37447
+Batch number:  49000
+Loss:  77.27431
+Batch number:  50000
+Loss:  76.79903
+Accuracy:  0.0
+Batch number:  51000
+Loss:  75.82957
+Batch number:  52000
+Loss:  76.05602
+Batch number:  53000
+Loss:  75.58448
+Batch number:  54000
+Loss:  74.67004
+Batch number:  55000
+Loss:  75.08746
+Batch number:  56000
+Loss:  74.51726
+Batch number:  57000
+Loss:  73.96673
+Batch number:  58000
+Loss:  73.60134
+Batch number:  59000
+Loss:  73.5071
+Batch number:  60000
+Loss:  73.15435
+Accuracy:  0.0
+Batch number:  61000
+Loss:  73.05086
+Batch number:  62000
+Loss:  72.63975
+Batch number:  63000
+Loss:  72.45679
+Batch number:  64000
+Loss:  71.4167
+Batch number:  65000
+Loss:  71.53609
+Batch number:  66000
+Loss:  70.86145
+Batch number:  67000
+Loss:  70.78905
+Batch number:  68000
+Loss:  70.55755
+Batch number:  69000
+Loss:  70.59204
+Batch number:  70000
+Loss:  69.46624
+Accuracy:  0.0
+Batch number:  71000
+Loss:  69.47108
+Batch number:  72000
+Loss:  69.26868
+Batch number:  73000
+Loss:  68.64565
+Batch number:  74000
+Loss:  68.3846
+Batch number:  75000
+Loss:  68.5428
+Batch number:  76000
+Loss:  67.80484
+Batch number:  77000
+Loss:  67.74199
+Batch number:  78000
+Loss:  67.09586
+Batch number:  79000
+Loss:  66.79554
+Batch number:  80000
+Loss:  66.424
+Accuracy:  0.0
+Batch number:  81000
+Loss:  66.52677
+Batch number:  82000
+Loss:  66.32375
+Batch number:  83000
+Loss:  65.35217
+Batch number:  84000
+Loss:  65.42568
+Batch number:  85000
+Loss:  65.40475
+Batch number:  86000
+Loss:  65.20098
+Batch number:  87000
+Loss:  65.56705
+Batch number:  88000
+Loss:  64.27979
+Batch number:  89000
+Loss:  63.74455
+Batch number:  90000
+Loss:  64.0035
+Accuracy:  0.0
+Batch number:  91000
+Loss:  63.92643
+Batch number:  92000
+Loss:  63.51171
+Batch number:  93000
+Loss:  63.10918
+Batch number:  94000
+Loss:  62.52759
+Batch number:  95000
+Loss:  62.9394
+Batch number:  96000
+Loss:  62.07248
+Batch number:  97000
+Loss:  62.67749
+Batch number:  98000
+Loss:  62.08288
+Batch number:  99000
+Loss:  62.21927
+Batch number:  100000
+Loss:  61.42263
+Accuracy:  0.0
+Batch number:  101000
+Loss:  61.45612
+Batch number:  102000
+Loss:  60.75146
+Batch number:  103000
+Loss:  60.62162
+Batch number:  104000
+Loss:  60.97133
+Batch number:  105000
+Loss:  61.10418
+Batch number:  106000
+Loss:  60.63641
+Batch number:  107000
+Loss:  59.69309
+Batch number:  108000
+Loss:  59.5961
+Batch number:  109000
+Loss:  59.41163
+Batch number:  110000
+Loss:  59.3661
+Accuracy:  0.0
+Batch number:  111000
+Loss:  59.33548
+Batch number:  112000
+Loss:  59.10261
+Batch number:  113000
+Loss:  58.94855
+Batch number:  114000
+Loss:  58.59568
+Batch number:  115000
+Loss:  58.41277
+Batch number:  116000
+Loss:  58.54876
+Batch number:  117000
+Loss:  57.55413
+Batch number:  118000
+Loss:  57.13109
+Batch number:  119000
+Loss:  57.68778
+Batch number:  120000
+Loss:  57.57908
+Accuracy:  0.0
+Batch number:  121000
+Loss:  56.90936
+Batch number:  122000
+Loss:  56.76155
+Batch number:  123000
+Loss:  57.03414
+Batch number:  124000
+Loss:  57.06316
+Batch number:  125000
+Loss:  56.58701
+Batch number:  126000
+Loss:  56.37686
+Batch number:  127000
+Loss:  55.7396
+Batch number:  128000
+Loss:  55.76131
+Batch number:  129000
+Loss:  55.19097
+Batch number:  130000
+Loss:  55.55245
+Accuracy:  0.0
+Batch number:  131000
+Loss:  55.35629
+Batch number:  132000
+Loss:  55.34369
+Batch number:  133000
+Loss:  54.49083
+Batch number:  134000
+Loss:  55.16709
+Batch number:  135000
+Loss:  54.58274
+Batch number:  136000
+Loss:  53.87914
+Batch number:  137000
+Loss:  54.04882
+Batch number:  138000
+Loss:  53.76916
+Batch number:  139000
+Loss:  53.68225
+Batch number:  140000
+Loss:  53.29221
+Accuracy:  0.0
+Batch number:  141000
+Loss:  52.79201
+Batch number:  142000
+Loss:  53.09951
+Batch number:  143000
+Loss:  52.53971
+Batch number:  144000
+Loss:  52.42373
+Batch number:  145000
+Loss:  51.52549
+Batch number:  146000
+Loss:  52.43244
+Batch number:  147000
+Loss:  52.26712
+Batch number:  148000
+Loss:  51.48244
+Batch number:  149000
+Loss:  51.79041
+Batch number:  150000
+Loss:  51.27645
+Accuracy:  0.0
+Batch number:  151000
+Loss:  51.4336
+Batch number:  152000
+Loss:  51.15063
+Batch number:  153000
+Loss:  50.79079
+Batch number:  154000
+Loss:  51.10624
+Batch number:  155000
+Loss:  50.09655
+Batch number:  156000
+Loss:  50.1226
+Batch number:  157000
+Loss:  49.86863
+Batch number:  158000
+Loss:  49.93359
+Batch number:  159000
+Loss:  49.96997
+Batch number:  160000
+Loss:  49.95852
+Accuracy:  0.0
+Batch number:  161000
+Loss:  50.0597
+Batch number:  162000
+Loss:  49.15706
+Batch number:  163000
+Loss:  49.41688
+Batch number:  164000
+Loss:  49.00358
+Batch number:  165000
+Loss:  49.1057
+Batch number:  166000
+Loss:  48.83235
+Batch number:  167000
+Loss:  49.06229
+Batch number:  168000
+Loss:  48.00808
+Batch number:  169000
+Loss:  48.22878
+Batch number:  170000
+Loss:  48.35246
+Accuracy:  0.0
+Batch number:  171000
+Loss:  48.19449
+Batch number:  172000
+Loss:  47.65545
+Batch number:  173000
+Loss:  47.40189
+Batch number:  174000
+Loss:  47.5958
+Batch number:  175000
+Loss:  47.70559
+Batch number:  176000
+Loss:  47.39747
+Batch number:  177000
+Loss:  47.92298
+Batch number:  178000
+Loss:  46.66351
+Batch number:  179000
+Loss:  46.79568
+Batch number:  180000
+Loss:  46.76123
+Accuracy:  0.0
+Batch number:  181000
+Loss:  47.01275
+Batch number:  182000
+Loss:  46.10571
+Batch number:  183000
+Loss:  46.09215
+Batch number:  184000
+Loss:  46.51018
+Batch number:  185000
+Loss:  45.98451
+Batch number:  186000
+Loss:  45.33109
+Batch number:  187000
+Loss:  45.47933
+Batch number:  188000
+Loss:  45.79461
+Batch number:  189000
+Loss:  45.04442
+Batch number:  190000
+Loss:  45.49036
+Accuracy:  0.0
+Batch number:  191000
+Loss:  45.21638
+Batch number:  192000
+Loss:  44.49049
+Batch number:  193000
+Loss:  43.98671
+Batch number:  194000
+Loss:  44.10825
+Batch number:  195000
+Loss:  44.69568
+Batch number:  196000
+Loss:  44.20366
+Batch number:  197000
+Loss:  44.27023
+Batch number:  198000
+Loss:  42.93281
+Batch number:  199000
+Loss:  43.60817
+Batch number:  200000
+Loss:  43.75071
+Accuracy:  0.0004
+Batch number:  201000
+Loss:  44.28373
+Batch number:  202000
+Loss:  43.96957
+Batch number:  203000
+Loss:  43.14153
+Batch number:  204000
+Loss:  42.66137
+Batch number:  205000
+Loss:  43.07814
+Batch number:  206000
+Loss:  43.10065
+Batch number:  207000
+Loss:  42.19165
+Batch number:  208000
+Loss:  42.43141
+Batch number:  209000
+Loss:  41.90594
+Batch number:  210000
+Loss:  42.69025
+Accuracy:  0.0
+Batch number:  211000
+Loss:  43.06126
+Batch number:  212000
+Loss:  42.34629
+Batch number:  213000
+Loss:  41.87786
+Batch number:  214000
+Loss:  41.97263
+Batch number:  215000
+Loss:  41.90227
+Batch number:  216000
+Loss:  41.34694
+Batch number:  217000
+Loss:  42.02501
+Batch number:  218000
+Loss:  41.36519
+Batch number:  219000
+Loss:  41.20203
+Batch number:  220000
+Loss:  41.13153
+Accuracy:  0.0004
+Batch number:  221000
+Loss:  40.72969
+Batch number:  222000
+Loss:  41.08994
+Batch number:  223000
+Loss:  40.91232
+Batch number:  224000
+Loss:  41.11467
+Batch number:  225000
+Loss:  40.59916
+Batch number:  226000
+Loss:  40.387
+Batch number:  227000
+Loss:  39.59268
+Batch number:  228000
+Loss:  40.70338
+Batch number:  229000
+Loss:  39.58129
+Batch number:  230000
+Loss:  40.46554
+Accuracy:  0.0004
+Batch number:  231000
+Loss:  39.84282
+Batch number:  232000
+Loss:  39.9436
+Batch number:  233000
+Loss:  40.13969
+Batch number:  234000
+Loss:  39.63324
+Batch number:  235000
+Loss:  39.15332
+Batch number:  236000
+Loss:  39.1158
+Batch number:  237000
+Loss:  39.05215
+Batch number:  238000
+Loss:  39.53823
+Batch number:  239000
+Loss:  38.59443
+Batch number:  240000
+Loss:  39.49947
+Accuracy:  0.0004
+Batch number:  241000
+Loss:  39.58331
+Batch number:  242000
+Loss:  38.37519
+Batch number:  243000
+Loss:  38.85544
+Batch number:  244000
+Loss:  38.79829
+Batch number:  245000
+Loss:  38.59303
+Batch number:  246000
+Loss:  38.16022
+Batch number:  247000
+Loss:  38.22042
+Batch number:  248000
+Loss:  38.40064
+Batch number:  249000
+Loss:  38.40556
+Batch number:  250000
+Loss:  37.76328
+Accuracy:  0.0002
+Batch number:  251000
+Loss:  38.08249
+Batch number:  252000
+Loss:  37.523
+Batch number:  253000
+Loss:  37.15826
+Batch number:  254000
+Loss:  37.17953
+Batch number:  255000
+Loss:  37.50138
+Batch number:  256000
+Loss:  36.88457
+Batch number:  257000
+Loss:  36.60099
+Batch number:  258000
+Loss:  36.78862
+Batch number:  259000
+Loss:  37.1146
+Batch number:  260000
+Loss:  37.34826
+Accuracy:  0.0014
+Batch number:  261000
+Loss:  36.67182
+Batch number:  262000
+Loss:  37.20988
+Batch number:  263000
+Loss:  36.79326
+Batch number:  264000
+Loss:  36.51277
+Batch number:  265000
+Loss:  36.40551
+Batch number:  266000
+Loss:  36.26505
+Batch number:  267000
+Loss:  36.10991
+Batch number:  268000
+Loss:  35.22126
+Batch number:  269000
+Loss:  35.43449
+Batch number:  270000
+Loss:  35.94158
+Accuracy:  0.001
+Batch number:  271000
+Loss:  35.77276
+Batch number:  272000
+Loss:  35.91306
+Batch number:  273000
+Loss:  35.92048
+Batch number:  274000
+Loss:  35.91604
+Batch number:  275000
+Loss:  35.034
+Batch number:  276000
+Loss:  35.281
+Batch number:  277000
+Loss:  35.11627
+Batch number:  278000
+Loss:  35.04089
+Batch number:  279000
+Loss:  34.52938
+Batch number:  280000
+Loss:  35.14238
+Accuracy:  0.0014
+Batch number:  281000
+Loss:  35.21821
+Batch number:  282000
+Loss:  34.87694
+Batch number:  283000
+Loss:  34.91033
+Batch number:  284000
+Loss:  35.31527
+Batch number:  285000
+Loss:  33.708
+Batch number:  286000
+Loss:  34.89359
+Batch number:  287000
+Loss:  34.11135
+Batch number:  288000
+Loss:  33.49596
+Batch number:  289000
+Loss:  33.71185
+Batch number:  290000
+Loss:  34.82228
+Accuracy:  0.0056
+Batch number:  291000
+Loss:  33.86019
+Batch number:  292000
+Loss:  34.02171
+Batch number:  293000
+Loss:  34.38439
+Batch number:  294000
+Loss:  33.18247
+Batch number:  295000
+Loss:  34.15142
+Batch number:  296000
+Loss:  33.84095
+Batch number:  297000
+Loss:  33.95803
+Batch number:  298000
+Loss:  32.92495
+Batch number:  299000
+Loss:  34.02095
+Batch number:  300000
+Loss:  33.43034
+Accuracy:  0.001
+Batch number:  301000
+Loss:  32.94197
+Batch number:  302000
+Loss:  33.53688
+Batch number:  303000
+Loss:  32.89769
+Batch number:  304000
+Loss:  33.27962
+Batch number:  305000
+Loss:  33.50139
+Batch number:  306000
+Loss:  32.62123
+Batch number:  307000
+Loss:  32.72613
+Batch number:  308000
+Loss:  32.16061
+Batch number:  309000
+Loss:  33.34729
+Batch number:  310000
+Loss:  32.18567
+Accuracy:  0.003
+Batch number:  311000
+Loss:  32.15769
+Batch number:  312000
+Loss:  32.07418
+Batch number:  313000
+Loss:  31.26811
+Batch number:  314000
+Loss:  32.3427
+Batch number:  315000
+Loss:  32.13832
+Batch number:  316000
+Loss:  32.13919
+Batch number:  317000
+Loss:  31.574
+Batch number:  318000
+Loss:  30.97837
+Batch number:  319000
+Loss:  31.44054
+Batch number:  320000
+Loss:  31.99968
+Accuracy:  0.0064
+Batch number:  321000
+Loss:  31.6182
+Batch number:  322000
+Loss:  32.0964
+Batch number:  323000
+Loss:  32.24955
+Batch number:  324000
+Loss:  31.57767
+Batch number:  325000
+Loss:  31.24276
+Batch number:  326000
+Loss:  30.9187
+Batch number:  327000
+Loss:  30.87623
+Batch number:  328000
+Loss:  30.6764
+Batch number:  329000
+Loss:  31.14942
+Batch number:  330000
+Loss:  30.97756
+Accuracy:  0.006
+Batch number:  331000
+Loss:  31.03513
+Batch number:  332000
+Loss:  31.26885
+Batch number:  333000
+Loss:  30.74387
+Batch number:  334000
+Loss:  30.57166
+Batch number:  335000
+Loss:  30.65636
+Batch number:  336000
+Loss:  30.41337
+Batch number:  337000
+Loss:  30.6024
+Batch number:  338000
+Loss:  30.59644
+Batch number:  339000
+Loss:  31.1585
+Batch number:  340000
+Loss:  30.41123
+Accuracy:  0.0076
+Batch number:  341000
+Loss:  31.32482
+Batch number:  342000
+Loss:  29.61169
+Batch number:  343000
+Loss:  29.88127
+Batch number:  344000
+Loss:  29.60651
+Batch number:  345000
+Loss:  30.35007
+Batch number:  346000
+Loss:  29.80691
+Batch number:  347000
+Loss:  30.26778
+Batch number:  348000
+Loss:  29.82286
+Batch number:  349000
+Loss:  30.05928
+Batch number:  350000
+Loss:  29.52762
+Accuracy:  0.0074
+Batch number:  351000
+Loss:  29.38799
+Batch number:  352000
+Loss:  29.33031
+Batch number:  353000
+Loss:  29.24063
+Batch number:  354000
+Loss:  29.82086
+Batch number:  355000
+Loss:  29.1452
+Batch number:  356000
+Loss:  29.97857
+Batch number:  357000
+Loss:  29.09128
+Batch number:  358000
+Loss:  29.09292
+Batch number:  359000
+Loss:  29.26335
+Batch number:  360000
+Loss:  29.37491
+Accuracy:  0.0082
+Batch number:  361000
+Loss:  29.4697
+Batch number:  362000
+Loss:  29.4773
+Batch number:  363000
+Loss:  29.04804
+Batch number:  364000
+Loss:  28.76741
+Batch number:  365000
+Loss:  28.63133
+Batch number:  366000
+Loss:  29.19912
+Batch number:  367000
+Loss:  29.12811
+Batch number:  368000
+Loss:  29.17682
+Batch number:  369000
+Loss:  29.22637
+Batch number:  370000
+Loss:  28.44897
+Accuracy:  0.011
+Batch number:  371000
+Loss:  28.66421
+Batch number:  372000
+Loss:  28.2571
+Batch number:  373000
+Loss:  28.43653
+Batch number:  374000
+Loss:  28.9031
+Batch number:  375000
+Loss:  28.02922
+Batch number:  376000
+Loss:  28.35081
+Batch number:  377000
+Loss:  28.64052
+Batch number:  378000
+Loss:  27.63378
+Batch number:  379000
+Loss:  27.96667
+Batch number:  380000
+Loss:  28.26678
+Accuracy:  0.0158
+Batch number:  381000
+Loss:  28.05749
+Batch number:  382000
+Loss:  28.28786
+Batch number:  383000
+Loss:  28.18859
+Batch number:  384000
+Loss:  28.4578
+Batch number:  385000
+Loss:  27.7171
+Batch number:  386000
+Loss:  28.3925
+Batch number:  387000
+Loss:  27.81971
+Batch number:  388000
+Loss:  27.91955
+Batch number:  389000
+Loss:  28.0903
+Batch number:  390000
+Loss:  27.81099
+Accuracy:  0.0046
+Batch number:  391000
+Loss:  27.48355
+Batch number:  392000
+Loss:  27.01026
+Batch number:  393000
+Loss:  27.21436
+Batch number:  394000
+Loss:  27.34358
+Batch number:  395000
+Loss:  27.14905
+Batch number:  396000
+Loss:  27.98218
+Batch number:  397000
+Loss:  27.15865
+Batch number:  398000
+Loss:  27.16088
+Batch number:  399000
+Loss:  27.01476
+Batch number:  400000
+Loss:  26.67435
+Accuracy:  0.023
+Batch number:  401000
+Loss:  28.43559
+Batch number:  402000
+Loss:  27.64269
+Batch number:  403000
+Loss:  27.44875
+Batch number:  404000
+Loss:  26.70953
+Batch number:  405000
+Loss:  26.86981
+Batch number:  406000
+Loss:  27.0239
+Batch number:  407000
+Loss:  27.14451
+Batch number:  408000
+Loss:  27.32956
+Batch number:  409000
+Loss:  26.96996
+Batch number:  410000
+Loss:  26.53387
+Accuracy:  0.0028
+Batch number:  411000
+Loss:  27.35197
+Batch number:  412000
+Loss:  26.13952
+Batch number:  413000
+Loss:  27.38978
+Batch number:  414000
+Loss:  26.48129
+Batch number:  415000
+Loss:  26.39605
+Batch number:  416000
+Loss:  26.07837
+Batch number:  417000
+Loss:  26.75872
+Batch number:  418000
+Loss:  25.85876
+Batch number:  419000
+Loss:  26.60996
+Batch number:  420000
+Loss:  26.67724
+Accuracy:  0.0214
+Batch number:  421000
+Loss:  27.2161
+Batch number:  422000
+Loss:  26.60966
+Batch number:  423000
+Loss:  26.76126
+Batch number:  424000
+Loss:  26.30166
+Batch number:  425000
+Loss:  26.96577
+Batch number:  426000
+Loss:  25.73183
+Batch number:  427000
+Loss:  26.02279
+Batch number:  428000
+Loss:  25.98126
+Batch number:  429000
+Loss:  25.83663
+Batch number:  430000
+Loss:  26.22257
+Accuracy:  0.0128
+Batch number:  431000
+Loss:  25.83713
+Batch number:  432000
+Loss:  26.05655
+Batch number:  433000
+Loss:  25.76095
+Batch number:  434000
+Loss:  25.75769
+Batch number:  435000
+Loss:  25.39084
+Batch number:  436000
+Loss:  25.64412
+Batch number:  437000
+Loss:  25.78606
+Batch number:  438000
+Loss:  25.88548
+Batch number:  439000
+Loss:  25.86565
+Batch number:  440000
+Loss:  25.61085
+Accuracy:  0.0088
+Batch number:  441000
+Loss:  25.39389
+Batch number:  442000
+Loss:  26.46138
+Batch number:  443000
+Loss:  26.3735
+Batch number:  444000
+Loss:  25.91196
+Batch number:  445000
+Loss:  25.47329
+Batch number:  446000
+Loss:  26.1678
+Batch number:  447000
+Loss:  26.1338
+Batch number:  448000
+Loss:  25.50852
+Batch number:  449000
+Loss:  25.7674
+Batch number:  450000
+Loss:  25.7596
+Accuracy:  0.0082
+Batch number:  451000
+Loss:  25.49082
+Batch number:  452000
+Loss:  25.35064
+Batch number:  453000
+Loss:  24.81807
+Batch number:  454000
+Loss:  24.69918
+Batch number:  455000
+Loss:  25.77162
+Batch number:  456000
+Loss:  25.79894
+Batch number:  457000
+Loss:  24.89259
+Batch number:  458000
+Loss:  25.33329
+Batch number:  459000
+Loss:  25.43636
+Batch number:  460000
+Loss:  25.12857
+Accuracy:  0.0306
+Batch number:  461000
+Loss:  25.79071
+Batch number:  462000
+Loss:  24.59776
+Batch number:  463000
+Loss:  24.77642
+Batch number:  464000
+Loss:  24.64217
+Batch number:  465000
+Loss:  25.06862
+Batch number:  466000
+Loss:  24.65678
+Batch number:  467000
+Loss:  24.79717
+Batch number:  468000
+Loss:  24.76139
+Batch number:  469000
+Loss:  25.02381
+Batch number:  470000
+Loss:  24.52109
+Accuracy:  0.0388
+Batch number:  471000
+Loss:  24.14219
+Batch number:  472000
+Loss:  25.10876
+Batch number:  473000
+Loss:  24.04852
+Batch number:  474000
+Loss:  24.28255
+Batch number:  475000
+Loss:  25.02848
+Batch number:  476000
+Loss:  24.97396
+Batch number:  477000
+Loss:  24.08662
+Batch number:  478000
+Loss:  24.41668
+Batch number:  479000
+Loss:  23.86976
+Batch number:  480000
+Loss:  24.06867
+Accuracy:  0.0442
+Batch number:  481000
+Loss:  24.96078
+Batch number:  482000
+Loss:  24.39313
+Batch number:  483000
+Loss:  25.21734
+Batch number:  484000
+Loss:  24.57725
+Batch number:  485000
+Loss:  24.09855
+Batch number:  486000
+Loss:  24.31486
+Batch number:  487000
+Loss:  24.38743
+Batch number:  488000
+Loss:  24.30013
+Batch number:  489000
+Loss:  24.19166
+Batch number:  490000
+Loss:  23.60124
+Accuracy:  0.0432
+Batch number:  491000
+Loss:  24.28024
+Batch number:  492000
+Loss:  24.1436
+Batch number:  493000
+Loss:  23.69071
+Batch number:  494000
+Loss:  23.41325
+Batch number:  495000
+Loss:  24.26263
+Batch number:  496000
+Loss:  23.78669
+Batch number:  497000
+Loss:  23.27579
+Batch number:  498000
+Loss:  23.29928
+Batch number:  499000
+Loss:  24.018
+Batch number:  500000
+Loss:  24.28823
+Accuracy:  0.0352
+Batch number:  501000
+Loss:  23.35711
+Batch number:  502000
+Loss:  23.41488
+Batch number:  503000
+Loss:  23.99478
+Batch number:  504000
+Loss:  23.46812
+Batch number:  505000
+Loss:  23.21776
+Batch number:  506000
+Loss:  23.17747
+Batch number:  507000
+Loss:  23.2304
+Batch number:  508000
+Loss:  23.97359
+Batch number:  509000
+Loss:  23.09963
+Batch number:  510000
+Loss:  23.4782
+Accuracy:  0.0436
+Batch number:  511000
+Loss:  23.09901
+Batch number:  512000
+Loss:  23.7443
+Batch number:  513000
+Loss:  23.40654
+Batch number:  514000
+Loss:  23.02145
+Batch number:  515000
+Loss:  23.72397
+Batch number:  516000
+Loss:  22.99967
+Batch number:  517000
+Loss:  23.58146
+Batch number:  518000
+Loss:  23.21565
+Batch number:  519000
+Loss:  22.5566
+Batch number:  520000
+Loss:  22.96401
+Accuracy:  0.0578
+Batch number:  521000
+Loss:  24.01352
+Batch number:  522000
+Loss:  22.71633
+Batch number:  523000
+Loss:  23.38989
+Batch number:  524000
+Loss:  22.75675
+Batch number:  525000
+Loss:  22.93864
+Batch number:  526000
+Loss:  23.23178
+Batch number:  527000
+Loss:  22.90066
+Batch number:  528000
+Loss:  22.83818
+Batch number:  529000
+Loss:  23.23229
+Batch number:  530000
+Loss:  23.26834
+Accuracy:  0.065
+Batch number:  531000
+Loss:  22.90198
+Batch number:  532000
+Loss:  23.27127
+Batch number:  533000
+Loss:  22.9489
+Batch number:  534000
+Loss:  22.96086
+Batch number:  535000
+Loss:  22.79041
+Batch number:  536000
+Loss:  22.90863
+Batch number:  537000
+Loss:  23.28665
+Batch number:  538000
+Loss:  22.67058
+Batch number:  539000
+Loss:  22.44862
+Batch number:  540000
+Loss:  22.66897
+Accuracy:  0.024
+Batch number:  541000
+Loss:  22.45168
+Batch number:  542000
+Loss:  22.39494
+Batch number:  543000
+Loss:  22.57093
+Batch number:  544000
+Loss:  22.50065
+Batch number:  545000
+Loss:  22.39253
+Batch number:  546000
+Loss:  23.34813
+Batch number:  547000
+Loss:  22.84946
+Batch number:  548000
+Loss:  22.78474
+Batch number:  549000
+Loss:  22.28546
+Batch number:  550000
+Loss:  22.88691
+Accuracy:  0.0018
+Batch number:  551000
+Loss:  22.13646
+Batch number:  552000
+Loss:  22.89153
+Batch number:  553000
+Loss:  21.88734
+Batch number:  554000
+Loss:  22.66479
+Batch number:  555000
+Loss:  22.28811
+Batch number:  556000
+Loss:  22.40919
+Batch number:  557000
+Loss:  21.92938
+Batch number:  558000
+Loss:  22.10703
+Batch number:  559000
+Loss:  21.76499
+Batch number:  560000
+Loss:  21.6261
+Accuracy:  0.08
+Batch number:  561000
+Loss:  21.30154
+Batch number:  562000
+Loss:  22.37757
+Batch number:  563000
+Loss:  21.9113
+Batch number:  564000
+Loss:  22.58299
+Batch number:  565000
+Loss:  21.48223
+Batch number:  566000
+Loss:  21.29491
+Batch number:  567000
+Loss:  21.33629
+Batch number:  568000
+Loss:  22.21168
+Batch number:  569000
+Loss:  22.68728
+Batch number:  570000
+Loss:  22.18432
+Accuracy:  0.0862
+Batch number:  571000
+Loss:  22.74967
+Batch number:  572000
+Loss:  22.17777
+Batch number:  573000
+Loss:  21.78487
+Batch number:  574000
+Loss:  21.98987
+Batch number:  575000
+Loss:  21.90856
+Batch number:  576000
+Loss:  22.0638
+Batch number:  577000
+Loss:  22.24309
+Batch number:  578000
+Loss:  21.82351
+Batch number:  579000
+Loss:  21.68415
+Batch number:  580000
+Loss:  22.07525
+Accuracy:  0.0668
+Batch number:  581000
+Loss:  20.7741
+Batch number:  582000
+Loss:  21.64575
+Batch number:  583000
+Loss:  22.01242
+Batch number:  584000
+Loss:  21.0961
+Batch number:  585000
+Loss:  21.12519
+Batch number:  586000
+Loss:  20.51004
+Batch number:  587000
+Loss:  21.20058
+Batch number:  588000
+Loss:  21.61605
+Batch number:  589000
+Loss:  21.3773
+Batch number:  590000
+Loss:  22.22324
+Accuracy:  0.0776
+Batch number:  591000
+Loss:  21.20498
+Batch number:  592000
+Loss:  20.99681
+Batch number:  593000
+Loss:  21.94786
+Batch number:  594000
+Loss:  21.36343
+Batch number:  595000
+Loss:  21.53536
+Batch number:  596000
+Loss:  21.32175
+Batch number:  597000
+Loss:  21.55852
+Batch number:  598000
+Loss:  21.18452
+Batch number:  599000
+Loss:  20.89059
+Batch number:  600000
+Loss:  21.01564
+Accuracy:  0.0714
+Batch number:  601000
+Loss:  21.0022
+Batch number:  602000
+Loss:  20.91613
+Batch number:  603000
+Loss:  21.93539
+Batch number:  604000
+Loss:  21.36444
+Batch number:  605000
+Loss:  21.44892
+Batch number:  606000
+Loss:  21.22638
+Batch number:  607000
+Loss:  21.2444
+Batch number:  608000
+Loss:  21.43023
+Batch number:  609000
+Loss:  21.05175
+Batch number:  610000
+Loss:  20.59693
+Accuracy:  0.0808
+Batch number:  611000
+Loss:  21.74764
+Batch number:  612000
+Loss:  20.87774
+Batch number:  613000
+Loss:  21.0383
+Batch number:  614000
+Loss:  21.20863
+Batch number:  615000
+Loss:  21.59541
+Batch number:  616000
+Loss:  20.59879
+Batch number:  617000
+Loss:  20.54498
+Batch number:  618000
+Loss:  20.93504
+Batch number:  619000
+Loss:  21.16311
+Batch number:  620000
+Loss:  20.71622
+Accuracy:  0.0856
+Batch number:  621000
+Loss:  19.94555
+Batch number:  622000
+Loss:  21.12416
+Batch number:  623000
+Loss:  21.34918
+Batch number:  624000
+Loss:  20.40092
+Batch number:  625000
+Loss:  21.30779
+Batch number:  626000
+Loss:  20.6907
+Batch number:  627000
+Loss:  20.81892
+Batch number:  628000
+Loss:  20.64408
+Batch number:  629000
+Loss:  20.35629
+Batch number:  630000
+Loss:  20.30524
+Accuracy:  0.0094
+Batch number:  631000
+Loss:  21.12033
+Batch number:  632000
+Loss:  21.13078
+Batch number:  633000
+Loss:  20.36552
+Batch number:  634000
+Loss:  20.97104
+Batch number:  635000
+Loss:  19.90746
+Batch number:  636000
+Loss:  20.83516
+Batch number:  637000
+Loss:  20.70614
+Batch number:  638000
+Loss:  19.96708
+Batch number:  639000
+Loss:  20.09519
+Batch number:  640000
+Loss:  20.24972
+Accuracy:  0.0836
+Batch number:  641000
+Loss:  20.06279
+Batch number:  642000
+Loss:  20.68156
+Batch number:  643000
+Loss:  19.46553
+Batch number:  644000
+Loss:  20.60273
+Batch number:  645000
+Loss:  20.69166
+Batch number:  646000
+Loss:  20.22492
+Batch number:  647000
+Loss:  20.51823
+Batch number:  648000
+Loss:  20.26816
+Batch number:  649000
+Loss:  19.6477
+Batch number:  650000
+Loss:  20.00993
+Accuracy:  0.1334
+Batch number:  651000
+Loss:  20.29332
+Batch number:  652000
+Loss:  19.89754
+Batch number:  653000
+Loss:  19.97959
+Batch number:  654000
+Loss:  19.74427
+Batch number:  655000
+Loss:  19.94069
+Batch number:  656000
+Loss:  20.7296
+Batch number:  657000
+Loss:  20.45175
+Batch number:  658000
+Loss:  19.15326
+Batch number:  659000
+Loss:  19.49147
+Batch number:  660000
+Loss:  20.07987
+Accuracy:  0.138
+Batch number:  661000
+Loss:  20.158
+Batch number:  662000
+Loss:  19.80629
+Batch number:  663000
+Loss:  20.33572
+Batch number:  664000
+Loss:  19.63855
+Batch number:  665000
+Loss:  19.78695
+Batch number:  666000
+Loss:  19.94427
+Batch number:  667000
+Loss:  19.63833
+Batch number:  668000
+Loss:  20.37947
+Batch number:  669000
+Loss:  19.55414
+Batch number:  670000
+Loss:  19.42846
+Accuracy:  0.1234
+Batch number:  671000
+Loss:  20.09252
+Batch number:  672000
+Loss:  19.22037
+Batch number:  673000
+Loss:  19.19512
+Batch number:  674000
+Loss:  19.91575
+Batch number:  675000
+Loss:  18.93237
+Batch number:  676000
+Loss:  18.81547
+Batch number:  677000
+Loss:  19.04497
+Batch number:  678000
+Loss:  20.06659
+Batch number:  679000
+Loss:  18.8432
+Batch number:  680000
+Loss:  19.1322
+Accuracy:  0.1984
+Batch number:  681000
+Loss:  19.00243
+Batch number:  682000
+Loss:  20.23408
+Batch number:  683000
+Loss:  20.1308
+Batch number:  684000
+Loss:  19.07468
+Batch number:  685000
+Loss:  19.4269
+Batch number:  686000
+Loss:  19.41209
+Batch number:  687000
+Loss:  18.68472
+Batch number:  688000
+Loss:  18.86334
+Batch number:  689000
+Loss:  19.51539
+Batch number:  690000
+Loss:  20.01536
+Accuracy:  0.1462
+Batch number:  691000
+Loss:  19.14477
+Batch number:  692000
+Loss:  20.02666
+Batch number:  693000
+Loss:  19.79877
+Batch number:  694000
+Loss:  19.59677
+Batch number:  695000
+Loss:  19.32584
+Batch number:  696000
+Loss:  19.74582
+Batch number:  697000
+Loss:  19.32629
+Batch number:  698000
+Loss:  19.14578
+Batch number:  699000
+Loss:  19.40493
+Batch number:  700000
+Loss:  19.27398
+Accuracy:  0.1442
+Batch number:  701000
+Loss:  19.42109
+Batch number:  702000
+Loss:  19.12173
+Batch number:  703000
+Loss:  19.90555
+Batch number:  704000
+Loss:  19.88776
+Batch number:  705000
+Loss:  19.56807
+Batch number:  706000
+Loss:  19.15885
+Batch number:  707000
+Loss:  18.69418
+Batch number:  708000
+Loss:  18.71776
+Batch number:  709000
+Loss:  19.41022
+Batch number:  710000
+Loss:  18.66849
+Accuracy:  0.0672
+Batch number:  711000
+Loss:  19.23689
+Batch number:  712000
+Loss:  18.75681
+Batch number:  713000
+Loss:  18.50285
+Batch number:  714000
+Loss:  18.95709
+Batch number:  715000
+Loss:  18.67347
+Batch number:  716000
+Loss:  18.91435
+Batch number:  717000
+Loss:  18.19151
+Batch number:  718000
+Loss:  19.37715
+Batch number:  719000
+Loss:  19.4887
+Batch number:  720000
+Loss:  18.81962
+Accuracy:  0.0884
+Batch number:  721000
+Loss:  19.02154
+Batch number:  722000
+Loss:  19.49929
+Batch number:  723000
+Loss:  18.71978
+Batch number:  724000
+Loss:  18.65415
+Batch number:  725000
+Loss:  18.61333
+Batch number:  726000
+Loss:  19.04856
+Batch number:  727000
+Loss:  18.80391
+Batch number:  728000
+Loss:  18.94138
+Batch number:  729000
+Loss:  18.49758
+Batch number:  730000
+Loss:  18.10239
+Accuracy:  0.0926
+Batch number:  731000
+Loss:  18.53798
+Batch number:  732000
+Loss:  19.21522
+Batch number:  733000
+Loss:  18.25204
+Batch number:  734000
+Loss:  18.55007
+Batch number:  735000
+Loss:  18.81866
+Batch number:  736000
+Loss:  18.95341
+Batch number:  737000
+Loss:  18.6801
+Batch number:  738000
+Loss:  18.42463
+Batch number:  739000
+Loss:  18.24934
+Batch number:  740000
+Loss:  19.00053
+Accuracy:  0.191
+Batch number:  741000
+Loss:  18.83616
+Batch number:  742000
+Loss:  18.87802
+Batch number:  743000
+Loss:  19.12565
+Batch number:  744000
+Loss:  17.97601
+Batch number:  745000
+Loss:  18.19475
+Batch number:  746000
+Loss:  18.79983
+Batch number:  747000
+Loss:  18.03021
+Batch number:  748000
+Loss:  18.61684
+Batch number:  749000
+Loss:  18.02349
+Batch number:  750000
+Loss:  18.61598
+Accuracy:  0.1182
+Batch number:  751000
+Loss:  17.52026
+Batch number:  752000
+Loss:  17.86795
+Batch number:  753000
+Loss:  18.60211
+Batch number:  754000
+Loss:  18.20972
+Batch number:  755000
+Loss:  18.31701
+Batch number:  756000
+Loss:  18.11105
+Batch number:  757000
+Loss:  18.26451
+Batch number:  758000
+Loss:  18.5214
+Batch number:  759000
+Loss:  18.18081
+Batch number:  760000
+Loss:  18.66133
+Accuracy:  0.1102
+Batch number:  761000
+Loss:  17.95857
+Batch number:  762000
+Loss:  18.43787
+Batch number:  763000
+Loss:  17.33573
+Batch number:  764000
+Loss:  18.17537
+Batch number:  765000
+Loss:  17.94178
+Batch number:  766000
+Loss:  17.60231
+Batch number:  767000
+Loss:  18.70237
+Batch number:  768000
+Loss:  17.54412
+Batch number:  769000
+Loss:  17.90415
+Batch number:  770000
+Loss:  18.0204
+Accuracy:  0.147
+Batch number:  771000
+Loss:  17.98086
+Batch number:  772000
+Loss:  17.81113
+Batch number:  773000
+Loss:  17.52003
+Batch number:  774000
+Loss:  18.55956
+Batch number:  775000
+Loss:  17.68432
+Batch number:  776000
+Loss:  17.77166
+Batch number:  777000
+Loss:  17.97504
+Batch number:  778000
+Loss:  17.68542
+Batch number:  779000
+Loss:  18.38102
+Batch number:  780000
+Loss:  18.38761
+Accuracy:  0.1426
+Batch number:  781000
+Loss:  17.65109
+Batch number:  782000
+Loss:  17.8421
+Batch number:  783000
+Loss:  18.56501
+Batch number:  784000
+Loss:  17.68954
+Batch number:  785000
+Loss:  17.35242
+Batch number:  786000
+Loss:  17.84937
+Batch number:  787000
+Loss:  18.02449
+Batch number:  788000
+Loss:  18.24437
+Batch number:  789000
+Loss:  17.34731
+Batch number:  790000
+Loss:  17.68792
+Accuracy:  0.1662
+Batch number:  791000
+Loss:  18.16544
+Batch number:  792000
+Loss:  17.55495
+Batch number:  793000
+Loss:  17.6085
+Batch number:  794000
+Loss:  17.35441
+Batch number:  795000
+Loss:  17.75474
+Batch number:  796000
+Loss:  17.44847
+Batch number:  797000
+Loss:  17.17971
+Batch number:  798000
+Loss:  17.09064
+Batch number:  799000
+Loss:  18.47209
+Batch number:  800000
+Loss:  17.24856
+Accuracy:  0.121
+Batch number:  801000
+Loss:  17.11691
+Batch number:  802000
+Loss:  17.4073
+Batch number:  803000
+Loss:  16.96642
+Batch number:  804000
+Loss:  17.89568
+Batch number:  805000
+Loss:  17.57794
+Batch number:  806000
+Loss:  17.53953
+Batch number:  807000
+Loss:  16.93348
+Batch number:  808000
+Loss:  17.0123
+Batch number:  809000
+Loss:  17.94729
+Batch number:  810000
+Loss:  17.1292
+Accuracy:  0.2108
+Batch number:  811000
+Loss:  17.26132
+Batch number:  812000
+Loss:  16.77001
+Batch number:  813000
+Loss:  17.30591
+Batch number:  814000
+Loss:  17.75751
+Batch number:  815000
+Loss:  17.66798
+Batch number:  816000
+Loss:  17.47436
+Batch number:  817000
+Loss:  17.42881
+Batch number:  818000
+Loss:  17.0474
+Batch number:  819000
+Loss:  17.50823
+Batch number:  820000
+Loss:  17.31759
+Accuracy:  0.0956
+Batch number:  821000
+Loss:  17.26698
+Batch number:  822000
+Loss:  16.76534
+Batch number:  823000
+Loss:  16.8968
+Batch number:  824000
+Loss:  16.62903
+Batch number:  825000
+Loss:  16.90218
+Batch number:  826000
+Loss:  17.57294
+Batch number:  827000
+Loss:  16.95478
+Batch number:  828000
+Loss:  16.97793
+Batch number:  829000
+Loss:  17.80555
+Batch number:  830000
+Loss:  17.67165
+Accuracy:  0.2178
+Batch number:  831000
+Loss:  17.48634
+Batch number:  832000
+Loss:  16.17544
+Batch number:  833000
+Loss:  16.99781
+Batch number:  834000
+Loss:  17.45549
+Batch number:  835000
+Loss:  16.32153
+Batch number:  836000
+Loss:  17.32437
+Batch number:  837000
+Loss:  16.85208
+Batch number:  838000
+Loss:  16.69285
+Batch number:  839000
+Loss:  16.50814
+Batch number:  840000
+Loss:  17.62536
+Accuracy:  0.236
+Batch number:  841000
+Loss:  16.26138
+Batch number:  842000
+Loss:  16.09341
+Batch number:  843000
+Loss:  17.39473
+Batch number:  844000
+Loss:  16.85545
+Batch number:  845000
+Loss:  16.82429
+Batch number:  846000
+Loss:  16.70825
+Batch number:  847000
+Loss:  17.44635
+Batch number:  848000
+Loss:  16.95276
+Batch number:  849000
+Loss:  16.1068
+Batch number:  850000
+Loss:  17.36546
+Accuracy:  0.163
+Batch number:  851000
+Loss:  16.66091
+Batch number:  852000
+Loss:  16.65217
+Batch number:  853000
+Loss:  16.66315
+Batch number:  854000
+Loss:  16.88101
+Batch number:  855000
+Loss:  15.91855
+Batch number:  856000
+Loss:  16.19754
+Batch number:  857000
+Loss:  16.21531
+Batch number:  858000
+Loss:  16.75562
+Batch number:  859000
+Loss:  16.68166
+Batch number:  860000
+Loss:  16.91441
+Accuracy:  0.1352
+Batch number:  861000
+Loss:  16.32174
+Batch number:  862000
+Loss:  16.25789
+Batch number:  863000
+Loss:  16.38455
+Batch number:  864000
+Loss:  16.74007
+Batch number:  865000
+Loss:  16.2075
+Batch number:  866000
+Loss:  16.02757
+Batch number:  867000
+Loss:  16.21301
+Batch number:  868000
+Loss:  16.10861
+Batch number:  869000
+Loss:  16.49972
+Batch number:  870000
+Loss:  17.14078
+Accuracy:  0.2732
+Batch number:  871000
+Loss:  16.23157
+Batch number:  872000
+Loss:  16.29789
+Batch number:  873000
+Loss:  16.39034
+Batch number:  874000
+Loss:  15.85693
+Batch number:  875000
+Loss:  16.78833
+Batch number:  876000
+Loss:  16.43551
+Batch number:  877000
+Loss:  16.0412
+Batch number:  878000
+Loss:  16.46555
+Batch number:  879000
+Loss:  16.61943
+Batch number:  880000
+Loss:  16.67529
+Accuracy:  0.1946
+Batch number:  881000
+Loss:  17.10957
+Batch number:  882000
+Loss:  16.6453
+Batch number:  883000
+Loss:  16.01967
+Batch number:  884000
+Loss:  16.58706
+Batch number:  885000
+Loss:  16.44586
+Batch number:  886000
+Loss:  15.71778
+Batch number:  887000
+Loss:  16.48645
+Batch number:  888000
+Loss:  16.00427
+Batch number:  889000
+Loss:  16.10336
+Batch number:  890000
+Loss:  16.81396
+Accuracy:  0.2436
+Batch number:  891000
+Loss:  16.6995
+Batch number:  892000
+Loss:  16.24669
+Batch number:  893000
+Loss:  16.39086
+Batch number:  894000
+Loss:  16.1697
+Batch number:  895000
+Loss:  16.0464
+Batch number:  896000
+Loss:  15.8614
+Batch number:  897000
+Loss:  16.31324
+Batch number:  898000
+Loss:  16.70585
+Batch number:  899000
+Loss:  16.72088
+Batch number:  900000
+Loss:  17.02869
+Accuracy:  0.2622
+Batch number:  901000
+Loss:  16.11331
+Batch number:  902000
+Loss:  16.98851
+Batch number:  903000
+Loss:  16.4159
+Batch number:  904000
+Loss:  15.60436
+Batch number:  905000
+Loss:  16.6904
+Batch number:  906000
+Loss:  16.10706
+Batch number:  907000
+Loss:  16.68146
+Batch number:  908000
+Loss:  16.17197
+Batch number:  909000
+Loss:  15.5766
+Batch number:  910000
+Loss:  16.0415
+Accuracy:  0.1344
+Batch number:  911000
+Loss:  16.21817
+Batch number:  912000
+Loss:  16.05435
+Batch number:  913000
+Loss:  16.05954
+Batch number:  914000
+Loss:  15.94322
+Batch number:  915000
+Loss:  16.32897
+Batch number:  916000
+Loss:  15.63163
+Batch number:  917000
+Loss:  15.79162
+Batch number:  918000
+Loss:  16.75825
+Batch number:  919000
+Loss:  15.46205
+Batch number:  920000
+Loss:  15.45672
+Accuracy:  0.19
+Batch number:  921000
+Loss:  15.90997
+Batch number:  922000
+Loss:  16.59599
+Batch number:  923000
+Loss:  15.36286
+Batch number:  924000
+Loss:  16.11004
+Batch number:  925000
+Loss:  16.4409
+Batch number:  926000
+Loss:  15.63188
+Batch number:  927000
+Loss:  15.62609
+Batch number:  928000
+Loss:  16.07464
+Batch number:  929000
+Loss:  15.1886
+Batch number:  930000
+Loss:  15.77351
+Accuracy:  0.2688
+Batch number:  931000
+Loss:  16.11104
+Batch number:  932000
+Loss:  16.44611
+Batch number:  933000
+Loss:  15.4755
+Batch number:  934000
+Loss:  15.96675
+Batch number:  935000
+Loss:  15.6024
+Batch number:  936000
+Loss:  15.21185
+Batch number:  937000
+Loss:  15.2377
+Batch number:  938000
+Loss:  15.65586
+Batch number:  939000
+Loss:  15.19772
+Batch number:  940000
+Loss:  15.81577
+Accuracy:  0.223
+Batch number:  941000
+Loss:  15.7386
+Batch number:  942000
+Loss:  15.23993
+Batch number:  943000
+Loss:  15.30824
+Batch number:  944000
+Loss:  15.27292
+Batch number:  945000
+Loss:  15.68641
+Batch number:  946000
+Loss:  15.39591
+Batch number:  947000
+Loss:  15.15981
+Batch number:  948000
+Loss:  15.72279
+Batch number:  949000
+Loss:  15.29901
+Batch number:  950000
+Loss:  15.45969
+Accuracy:  0.2688
+Batch number:  951000
+Loss:  15.33008
+Batch number:  952000
+Loss:  14.83741
+Batch number:  953000
+Loss:  14.75613
+Batch number:  954000
+Loss:  15.80981
+Batch number:  955000
+Loss:  15.45597
+Batch number:  956000
+Loss:  15.26108
+Batch number:  957000
+Loss:  15.37408
+Batch number:  958000
+Loss:  15.02609
+Batch number:  959000
+Loss:  15.85828
+Batch number:  960000
+Loss:  15.5359
+Accuracy:  0.0918
+Batch number:  961000
+Loss:  16.18365
+Batch number:  962000
+Loss:  15.50856
+Batch number:  963000
+Loss:  15.88636
+Batch number:  964000
+Loss:  15.24181
+Batch number:  965000
+Loss:  15.4385
+Batch number:  966000
+Loss:  16.11198
+Batch number:  967000
+Loss:  15.70953
+Batch number:  968000
+Loss:  15.05864
+Batch number:  969000
+Loss:  15.06118
+Batch number:  970000
+Loss:  14.75632
+Accuracy:  0.2788
+Batch number:  971000
+Loss:  14.97471
+Batch number:  972000
+Loss:  15.07351
+Batch number:  973000
+Loss:  14.75994
+Batch number:  974000
+Loss:  14.61551
+Batch number:  975000
+Loss:  15.47599
+Batch number:  976000
+Loss:  15.1971
+Batch number:  977000
+Loss:  14.9459
+Batch number:  978000
+Loss:  15.52197
+Batch number:  979000
+Loss:  15.14443
+Batch number:  980000
+Loss:  15.38917
+Accuracy:  0.1216
+Batch number:  981000
+Loss:  15.81806
+Batch number:  982000
+Loss:  15.56951
+Batch number:  983000
+Loss:  15.1481
+Batch number:  984000
+Loss:  15.1509
+Batch number:  985000
+Loss:  15.42584
+Batch number:  986000
+Loss:  15.18454
+Batch number:  987000
+Loss:  15.50242
+Batch number:  988000
+Loss:  15.30686
+Batch number:  989000
+Loss:  14.7941
+Batch number:  990000
+Loss:  14.81957
+Accuracy:  0.339
+Batch number:  991000
+Loss:  15.72094
+Batch number:  992000
+Loss:  14.67612
+Batch number:  993000
+Loss:  15.67218
+Batch number:  994000
+Loss:  14.7899
+Batch number:  995000
+Loss:  15.05012
+Batch number:  996000
+Loss:  14.68869
+Batch number:  997000
+Loss:  15.04203
+Batch number:  998000
+Loss:  14.54009
+Batch number:  999000
+Loss:  14.15577
+Batch number:  1000000
+Loss:  14.23979
+Accuracy:  0.2638
+Batch number:  1001000
+Loss:  14.66935
+Batch number:  1002000
+Loss:  15.59779
+Batch number:  1003000
+Loss:  14.74311
+Batch number:  1004000
+Loss:  14.84184
+Batch number:  1005000
+Loss:  13.97074
+Batch number:  1006000
+Loss:  14.51414
+Batch number:  1007000
+Loss:  15.38068
+Batch number:  1008000
+Loss:  14.99058
+Batch number:  1009000
+Loss:  14.67538
+Batch number:  1010000
+Loss:  14.67614
+Accuracy:  0.21
+Batch number:  1011000
+Loss:  14.94858
+Batch number:  1012000
+Loss:  14.79308
+Batch number:  1013000
+Loss:  15.52796
+Batch number:  1014000
+Loss:  14.37
+Batch number:  1015000
+Loss:  14.4955
+Batch number:  1016000
+Loss:  14.20824
+Batch number:  1017000
+Loss:  14.10956
+Batch number:  1018000
+Loss:  15.05246
+Batch number:  1019000
+Loss:  14.04625
+Batch number:  1020000
+Loss:  13.63695
+Accuracy:  0.3888
+Batch number:  1021000
+Loss:  14.57664
+Batch number:  1022000
+Loss:  14.22174
+Batch number:  1023000
+Loss:  15.33646
+Batch number:  1024000
+Loss:  14.39672
+Batch number:  1025000
+Loss:  14.71194
+Batch number:  1026000
+Loss:  14.36783
+Batch number:  1027000
+Loss:  14.50952
+Batch number:  1028000
+Loss:  14.69659
+Batch number:  1029000
+Loss:  14.90422
+Batch number:  1030000
+Loss:  14.11042
+Accuracy:  0.4086
+Batch number:  1031000
+Loss:  14.41762
+Batch number:  1032000
+Loss:  14.0761
+Batch number:  1033000
+Loss:  14.70835
+Batch number:  1034000
+Loss:  14.92074
+Batch number:  1035000
+Loss:  14.79577
+Batch number:  1036000
+Loss:  14.50246
+Batch number:  1037000
+Loss:  14.55357
+Batch number:  1038000
+Loss:  14.81777
+Batch number:  1039000
+Loss:  13.97845
+Batch number:  1040000
+Loss:  14.45101
+Accuracy:  0.3828
+Batch number:  1041000
+Loss:  14.48641
+Batch number:  1042000
+Loss:  14.36868
+Batch number:  1043000
+Loss:  14.75314
+Batch number:  1044000
+Loss:  14.4098
+Batch number:  1045000
+Loss:  13.85381
+Batch number:  1046000
+Loss:  13.7704
+Batch number:  1047000
+Loss:  13.79335
+Batch number:  1048000
+Loss:  15.11874
+Batch number:  1049000
+Loss:  14.48465
+Batch number:  1050000
+Loss:  14.30148
+Accuracy:  0.438
+Batch number:  1051000
+Loss:  14.34827
+Batch number:  1052000
+Loss:  14.93532
+Batch number:  1053000
+Loss:  14.3864
+Batch number:  1054000
+Loss:  13.87589
+Batch number:  1055000
+Loss:  15.09222
+Batch number:  1056000
+Loss:  14.27303
+Batch number:  1057000
+Loss:  13.94602
+Batch number:  1058000
+Loss:  14.59894
+Batch number:  1059000
+Loss:  14.69602
+Batch number:  1060000
+Loss:  13.60098
+Accuracy:  0.4032
+Batch number:  1061000
+Loss:  14.42997
+Batch number:  1062000
+Loss:  14.39716
+Batch number:  1063000
+Loss:  13.76116
+Batch number:  1064000
+Loss:  13.84888
+Batch number:  1065000
+Loss:  14.17156
+Batch number:  1066000
+Loss:  13.83977
+Batch number:  1067000
+Loss:  14.49987
+Batch number:  1068000
+Loss:  14.13887
+Batch number:  1069000
+Loss:  14.28859
+Batch number:  1070000
+Loss:  13.50937
+Accuracy:  0.3852
+Batch number:  1071000
+Loss:  14.85871
+Batch number:  1072000
+Loss:  14.04375
+Batch number:  1073000
+Loss:  13.58197
+Batch number:  1074000
+Loss:  13.83075
+Batch number:  1075000
+Loss:  14.5505
+Batch number:  1076000
+Loss:  15.09192
+Batch number:  1077000
+Loss:  13.47462
+Batch number:  1078000
+Loss:  14.41716
+Batch number:  1079000
+Loss:  14.78975
+Batch number:  1080000
+Loss:  14.7203
+Accuracy:  0.2372
+Batch number:  1081000
+Loss:  13.65923
+Batch number:  1082000
+Loss:  13.45967
+Batch number:  1083000
+Loss:  13.55236
+Batch number:  1084000
+Loss:  13.52461
+Batch number:  1085000
+Loss:  13.94541
+Batch number:  1086000
+Loss:  13.88773
+Batch number:  1087000
+Loss:  13.50811
+Batch number:  1088000
+Loss:  13.73051
+Batch number:  1089000
+Loss:  13.76392
+Batch number:  1090000
+Loss:  13.3958
+Accuracy:  0.3464
+Batch number:  1091000
+Loss:  13.67173
+Batch number:  1092000
+Loss:  14.23227
+Batch number:  1093000
+Loss:  14.25697
+Batch number:  1094000
+Loss:  14.12253
+Batch number:  1095000
+Loss:  13.34771
+Batch number:  1096000
+Loss:  14.09373
+Batch number:  1097000
+Loss:  13.36634
+Batch number:  1098000
+Loss:  13.45217
+Batch number:  1099000
+Loss:  13.58523
+Batch number:  1100000
+Loss:  13.94122
+Accuracy:  0.3286
+Batch number:  1101000
+Loss:  12.76126
+Batch number:  1102000
+Loss:  13.80679
+Batch number:  1103000
+Loss:  13.67948
+Batch number:  1104000
+Loss:  14.33123
+Batch number:  1105000
+Loss:  13.20891
+Batch number:  1106000
+Loss:  13.73035
+Batch number:  1107000
+Loss:  13.44716
+Batch number:  1108000
+Loss:  14.14082
+Batch number:  1109000
+Loss:  13.29992
+Batch number:  1110000
+Loss:  13.4487
+Accuracy:  0.4342
+Batch number:  1111000
+Loss:  13.54034
+Batch number:  1112000
+Loss:  13.83597
+Batch number:  1113000
+Loss:  13.60088
+Batch number:  1114000
+Loss:  13.98328
+Batch number:  1115000
+Loss:  13.64212
+Batch number:  1116000
+Loss:  13.85667
+Batch number:  1117000
+Loss:  12.94738
+Batch number:  1118000
+Loss:  13.9068
+Batch number:  1119000
+Loss:  13.4429
+Batch number:  1120000
+Loss:  13.44523
+Accuracy:  0.4386
+Batch number:  1121000
+Loss:  13.58632
+Batch number:  1122000
+Loss:  13.19112
+Batch number:  1123000
+Loss:  14.17997
+Batch number:  1124000
+Loss:  13.51583
+Batch number:  1125000
+Loss:  13.80027
+Batch number:  1126000
+Loss:  13.32579
+Batch number:  1127000
+Loss:  13.50412
+Batch number:  1128000
+Loss:  13.8084
+Batch number:  1129000
+Loss:  13.45434
+Batch number:  1130000
+Loss:  13.69392
+Accuracy:  0.386
+Batch number:  1131000
+Loss:  13.82602
+Batch number:  1132000
+Loss:  12.72036
+Batch number:  1133000
+Loss:  13.52428
+Batch number:  1134000
+Loss:  13.41101
+Batch number:  1135000
+Loss:  13.19388
+Batch number:  1136000
+Loss:  13.00893
+Batch number:  1137000
+Loss:  13.28734
+Batch number:  1138000
+Loss:  13.213
+Batch number:  1139000
+Loss:  13.37561
+Batch number:  1140000
+Loss:  13.06364
+Accuracy:  0.4326
+Batch number:  1141000
+Loss:  12.95217
+Batch number:  1142000
+Loss:  13.96368
+Batch number:  1143000
+Loss:  13.2464
+Batch number:  1144000
+Loss:  12.81615
+Batch number:  1145000
+Loss:  13.01647
+Batch number:  1146000
+Loss:  12.73346
+Batch number:  1147000
+Loss:  13.01081
+Batch number:  1148000
+Loss:  13.49394
+Batch number:  1149000
+Loss:  13.21961
+Batch number:  1150000
+Loss:  13.50191
+Accuracy:  0.3156
+Batch number:  1151000
+Loss:  12.99176
+Batch number:  1152000
+Loss:  12.39112
+Batch number:  1153000
+Loss:  13.30388
+Batch number:  1154000
+Loss:  13.307
+Batch number:  1155000
+Loss:  13.32756
+Batch number:  1156000
+Loss:  13.29453
+Batch number:  1157000
+Loss:  14.24007
+Batch number:  1158000
+Loss:  13.03678
+Batch number:  1159000
+Loss:  12.98015
+Batch number:  1160000
+Loss:  13.39327
+Accuracy:  0.4084
+Batch number:  1161000
+Loss:  12.86138
+Batch number:  1162000
+Loss:  13.77357
+Batch number:  1163000
+Loss:  12.98152
+Batch number:  1164000
+Loss:  13.24273
+Batch number:  1165000
+Loss:  13.32577
+Batch number:  1166000
+Loss:  12.86351
+Batch number:  1167000
+Loss:  13.43033
+Batch number:  1168000
+Loss:  12.87276
+Batch number:  1169000
+Loss:  13.11464
+Batch number:  1170000
+Loss:  13.1381
+Accuracy:  0.2568
+Batch number:  1171000
+Loss:  13.42575
+Batch number:  1172000
+Loss:  12.95455
+Batch number:  1173000
+Loss:  13.34816
+Batch number:  1174000
+Loss:  12.99365
+Batch number:  1175000
+Loss:  13.09611
+Batch number:  1176000
+Loss:  12.56331
+Batch number:  1177000
+Loss:  13.00922
+Batch number:  1178000
+Loss:  13.17499
+Batch number:  1179000
+Loss:  12.68148
+Batch number:  1180000
+Loss:  12.48102
+Accuracy:  0.4134
+Batch number:  1181000
+Loss:  13.30134
+Batch number:  1182000
+Loss:  13.57233
+Batch number:  1183000
+Loss:  12.89004
+Batch number:  1184000
+Loss:  13.01346
+Batch number:  1185000
+Loss:  13.27198
+Batch number:  1186000
+Loss:  13.80999
+Batch number:  1187000
+Loss:  12.55025
+Batch number:  1188000
+Loss:  12.96866
+Batch number:  1189000
+Loss:  12.95713
+Batch number:  1190000
+Loss:  12.69216
+Accuracy:  0.4264
+Batch number:  1191000
+Loss:  12.98356
+Batch number:  1192000
+Loss:  12.76988
+Batch number:  1193000
+Loss:  13.69124
+Batch number:  1194000
+Loss:  13.27323
+Batch number:  1195000
+Loss:  12.9753
+Batch number:  1196000
+Loss:  13.23073
+Batch number:  1197000
+Loss:  12.70305
+Batch number:  1198000
+Loss:  12.73789
+Batch number:  1199000
+Loss:  12.78928
+Batch number:  1200000
+Loss:  12.57604
+Accuracy:  0.4496
+Batch number:  1201000
+Loss:  13.10987
+Batch number:  1202000
+Loss:  12.92212
+Batch number:  1203000
+Loss:  12.34955
+Batch number:  1204000
+Loss:  13.25283
+Batch number:  1205000
+Loss:  12.15382
+Batch number:  1206000
+Loss:  12.85547
+Batch number:  1207000
+Loss:  13.13253
+Batch number:  1208000
+Loss:  12.96947
+Batch number:  1209000
+Loss:  12.32937
+Batch number:  1210000
+Loss:  12.67579
+Accuracy:  0.3606
+Batch number:  1211000
+Loss:  12.87848
+Batch number:  1212000
+Loss:  13.33402
+Batch number:  1213000
+Loss:  12.57106
+Batch number:  1214000
+Loss:  12.53849
+Batch number:  1215000
+Loss:  12.25962
+Batch number:  1216000
+Loss:  12.56253
+Batch number:  1217000
+Loss:  12.86882
+Batch number:  1218000
+Loss:  12.83464
+Batch number:  1219000
+Loss:  13.08655
+Batch number:  1220000
+Loss:  12.52005
+Accuracy:  0.4022
+Batch number:  1221000
+Loss:  12.79435
+Batch number:  1222000
+Loss:  12.98269
+Batch number:  1223000
+Loss:  12.71553
+Batch number:  1224000
+Loss:  12.57139
+Batch number:  1225000
+Loss:  11.89537
+Batch number:  1226000
+Loss:  12.1956
+Batch number:  1227000
+Loss:  11.86574
+Batch number:  1228000
+Loss:  12.51864
+Batch number:  1229000
+Loss:  12.52076
+Batch number:  1230000
+Loss:  12.9179
+Accuracy:  0.3214
+Batch number:  1231000
+Loss:  12.84816
+Batch number:  1232000
+Loss:  12.84171
+Batch number:  1233000
+Loss:  12.247
+Batch number:  1234000
+Loss:  12.50161
+Batch number:  1235000
+Loss:  12.77308
+Batch number:  1236000
+Loss:  12.41104
+Batch number:  1237000
+Loss:  12.06264
+Batch number:  1238000
+Loss:  12.487
+Batch number:  1239000
+Loss:  12.53695
+Batch number:  1240000
+Loss:  12.15492
+Accuracy:  0.1348
+Batch number:  1241000
+Loss:  12.64684
+Batch number:  1242000
+Loss:  13.21251
+Batch number:  1243000
+Loss:  12.79929
+Batch number:  1244000
+Loss:  12.72877
+Batch number:  1245000
+Loss:  12.59426
+Batch number:  1246000
+Loss:  11.67138
+Batch number:  1247000
+Loss:  12.78785
+Batch number:  1248000
+Loss:  12.55708
+Batch number:  1249000
+Loss:  12.49091
+Batch number:  1250000
+Loss:  12.26627
+Accuracy:  0.3774
+Batch number:  1251000
+Loss:  12.21404
+Batch number:  1252000
+Loss:  12.23027
+Batch number:  1253000
+Loss:  11.22177
+Batch number:  1254000
+Loss:  12.86772
+Batch number:  1255000
+Loss:  12.72291
+Batch number:  1256000
+Loss:  12.77368
+Batch number:  1257000
+Loss:  11.80984
+Batch number:  1258000
+Loss:  12.02975
+Batch number:  1259000
+Loss:  12.64155
+Batch number:  1260000
+Loss:  11.86583
+Accuracy:  0.3848
+Batch number:  1261000
+Loss:  12.5393
+Batch number:  1262000
+Loss:  11.82586
+Batch number:  1263000
+Loss:  11.96304
+Batch number:  1264000
+Loss:  12.42303
+Batch number:  1265000
+Loss:  12.15581
+Batch number:  1266000
+Loss:  12.74227
+Batch number:  1267000
+Loss:  11.4015
+Batch number:  1268000
+Loss:  12.72493
+Batch number:  1269000
+Loss:  11.84026
+Batch number:  1270000
+Loss:  11.87625
+Accuracy:  0.4302
+Batch number:  1271000
+Loss:  11.81415
+Batch number:  1272000
+Loss:  11.99634
+Batch number:  1273000
+Loss:  12.49533
+Batch number:  1274000
+Loss:  12.47074
+Batch number:  1275000
+Loss:  11.85335
+Batch number:  1276000
+Loss:  13.01143
+Batch number:  1277000
+Loss:  12.50676
+Batch number:  1278000
+Loss:  12.57046
+Batch number:  1279000
+Loss:  12.29795
+Batch number:  1280000
+Loss:  13.09795
+Accuracy:  0.411
+Batch number:  1281000
+Loss:  12.16457
+Batch number:  1282000
+Loss:  11.84931
+Batch number:  1283000
+Loss:  12.92806
+Batch number:  1284000
+Loss:  12.79707
+Batch number:  1285000
+Loss:  12.37986
+Batch number:  1286000
+Loss:  12.10222
+Batch number:  1287000
+Loss:  11.71838
+Batch number:  1288000
+Loss:  11.89711
+Batch number:  1289000
+Loss:  12.63472
+Batch number:  1290000
+Loss:  11.63556
+Accuracy:  0.3938
+Batch number:  1291000
+Loss:  12.48794
+Batch number:  1292000
+Loss:  13.2781
+Batch number:  1293000
+Loss:  12.14786
+Batch number:  1294000
+Loss:  12.48517
+Batch number:  1295000
+Loss:  13.34142
+Batch number:  1296000
+Loss:  11.70825
+Batch number:  1297000
+Loss:  11.19551
+Batch number:  1298000
+Loss:  11.83731
+Batch number:  1299000
+Loss:  11.93382
+Batch number:  1300000
+Loss:  12.42418
+Accuracy:  0.4748
+Batch number:  1301000
+Loss:  11.57051
+Batch number:  1302000
+Loss:  12.3542
+Batch number:  1303000
+Loss:  12.20704
+Batch number:  1304000
+Loss:  11.9054
+Batch number:  1305000
+Loss:  11.93264
+Batch number:  1306000
+Loss:  11.40403
+Batch number:  1307000
+Loss:  12.03575
+Batch number:  1308000
+Loss:  12.41409
+Batch number:  1309000
+Loss:  11.64291
+Batch number:  1310000
+Loss:  11.49637
+Accuracy:  0.6286

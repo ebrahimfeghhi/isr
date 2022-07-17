@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "run.py", line 130, in <module>
+    train_loop()
+  File "run.py", line 46, in train_loop
+    output_size, wandb.config['feedback_scaling'], wandb.config['nonlin'], wandb.config['rs_weights'])
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/wandb_config.py", line 128, in __getitem__
+    return self._items[key]
+KeyError: 'rs_weights'
+Traceback (most recent call last):
+  File "run.py", line 130, in <module>
+    train_loop()
+  File "run.py", line 46, in train_loop
+    output_size, wandb.config['feedback_scaling'], wandb.config['nonlin'], wandb.config['rs_weights'])
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/wandb_config.py", line 128, in __getitem__
+    return self._items[key]
+KeyError: 'rs_weights'

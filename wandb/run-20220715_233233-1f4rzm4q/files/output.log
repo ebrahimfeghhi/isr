@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "run.py", line 131, in <module>
+    train_loop()
+  File "run.py", line 46, in train_loop
+    model = RNN_one_layer(input_size, wandb.config['hs'],
+  File "/home3/ebrahim/isr/RNNcell.py", line 81, in __init__
+    self.h2o.weight = -1 * self.RNN.o2h.weight
+  File "/usr/lib/python3/dist-packages/torch/nn/modules/module.py", line 1198, in __setattr__
+    raise TypeError("cannot assign '{}' as parameter '{}' "
+TypeError: cannot assign 'torch.FloatTensor' as parameter 'weight' (torch.nn.Parameter or None expected)
+Traceback (most recent call last):
+  File "run.py", line 131, in <module>
+    train_loop()
+  File "run.py", line 46, in train_loop
+    model = RNN_one_layer(input_size, wandb.config['hs'],
+  File "/home3/ebrahim/isr/RNNcell.py", line 81, in __init__
+    self.h2o.weight = -1 * self.RNN.o2h.weight
+  File "/usr/lib/python3/dist-packages/torch/nn/modules/module.py", line 1198, in __setattr__
+    raise TypeError("cannot assign '{}' as parameter '{}' "
+TypeError: cannot assign 'torch.FloatTensor' as parameter 'weight' (torch.nn.Parameter or None expected)

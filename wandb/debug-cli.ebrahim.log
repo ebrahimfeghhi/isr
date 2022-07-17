@@ -1,0 +1,260 @@
+2022-07-16 09:43:42 INFO Running runs: []
+2022-07-16 09:43:42 INFO Agent received command: run
+2022-07-16 09:43:42 INFO Agent starting run with config:
+	hs: 50
+	lr: 0.001
+	momentum: 0
+2022-07-16 09:43:42 INFO About to run command: /usr/bin/env python run.py --hs=50 --lr=0.001 --momentum=0
+2022-07-16 09:43:47 INFO Running runs: ['k6yesu4x']
+2022-07-16 09:43:47 INFO Cleaning up finished run: k6yesu4x
+2022-07-16 09:43:48 INFO Agent received command: run
+2022-07-16 09:43:48 INFO Agent starting run with config:
+	hs: 50
+	lr: 0.001
+	momentum: 0.9
+2022-07-16 09:43:48 INFO About to run command: /usr/bin/env python run.py --hs=50 --lr=0.001 --momentum=0.9
+2022-07-16 09:57:02 INFO Running runs: []
+2022-07-16 09:57:02 INFO Agent received command: run
+2022-07-16 09:57:02 INFO Agent starting run with config:
+	hs: 50
+	lr: 0.001
+	momentum: 0
+2022-07-16 09:57:02 INFO About to run command: /usr/bin/env python run.py --hs=50 --lr=0.001 --momentum=0
+2022-07-16 09:57:07 INFO Running runs: ['be3pgyg9']
+2022-07-16 09:57:07 INFO Cleaning up finished run: be3pgyg9
+2022-07-16 09:57:07 INFO Agent received command: run
+2022-07-16 09:57:07 INFO Agent starting run with config:
+	hs: 50
+	lr: 0.001
+	momentum: 0.9
+2022-07-16 09:57:07 INFO About to run command: /usr/bin/env python run.py --hs=50 --lr=0.001 --momentum=0.9
+2022-07-16 09:57:12 INFO Running runs: ['2irm4pyc']
+2022-07-16 09:57:12 INFO Cleaning up finished run: 2irm4pyc
+2022-07-16 09:57:12 INFO Agent received command: run
+2022-07-16 09:57:12 INFO Agent starting run with config:
+	hs: 50
+	lr: 0.01
+	momentum: 0
+2022-07-16 09:57:12 INFO About to run command: /usr/bin/env python run.py --hs=50 --lr=0.01 --momentum=0
+2022-07-16 10:16:33 ERROR 400 response executing GraphQL.
+2022-07-16 10:16:33 ERROR {"errors":[{"message":"Invalid sweep config: invalid hyperparameter configuration: clip_factor","path":["upsertSweep"]}],"data":{"upsertSweep":null}}
+2022-07-16 10:16:33 ERROR Traceback (most recent call last):
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 108, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 158, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 39, in execute
+    request.raise_for_status()
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/apis/normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1982, in upsert_sweep
+    raise (e)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1967, in upsert_sweep
+    response = self.gql(
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 124, in __call__
+    if not check_retry_fn(e):
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1958, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.UsageError: Invalid sweep config: invalid hyperparameter configuration: clip_factor
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/cli/cli.py", line 97, in wrapper
+    return func(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/cli/cli.py", line 916, in sweep
+    sweep_id, warnings = api.upsert_sweep(
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/apis/internal.py", line 102, in upsert_sweep
+    return self.api.upsert_sweep(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/apis/normalize.py", line 61, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/apis/normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1982, in upsert_sweep
+    raise (e)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1967, in upsert_sweep
+    response = self.gql(
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 124, in __call__
+    if not check_retry_fn(e):
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1958, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.CommError: Invalid sweep config: invalid hyperparameter configuration: clip_factor
+
+2022-07-16 10:18:32 INFO Running runs: []
+2022-07-16 10:18:32 INFO Agent received command: run
+2022-07-16 10:18:32 INFO Agent starting run with config:
+	clip_factor: 10
+	clipping: False
+	feedback_scaling: 1
+	hs: 50
+	lr: 0.001
+	max_length: 9
+	momentum: 0
+	nonlin: sigmoid
+	num_cycles: 200000
+	num_letters: 10
+	opt: sgd
+	stopping_criteria: 0.58
+	test_list_length: 6
+	test_size: 5000
+	train_batch: 1
+2022-07-16 10:18:32 INFO About to run command: /usr/bin/env python run.py --clip_factor=10 --clipping=False --feedback_scaling=1 --hs=50 --lr=0.001 --max_length=9 --momentum=0 --nonlin=sigmoid --num_cycles=200000 --num_letters=10 --opt=sgd --stopping_criteria=0.58 --test_list_length=6 --test_size=5000 --train_batch=1
+2022-07-16 10:18:37 INFO Running runs: ['624evfpj']
+2022-07-16 10:18:37 INFO Cleaning up finished run: 624evfpj
+2022-07-16 10:18:38 INFO Agent received command: run
+2022-07-16 10:18:38 INFO Agent starting run with config:
+	clip_factor: 10
+	clipping: False
+	feedback_scaling: 1
+	hs: 50
+	lr: 0.001
+	max_length: 9
+	momentum: 0.9
+	nonlin: sigmoid
+	num_cycles: 200000
+	num_letters: 10
+	opt: sgd
+	stopping_criteria: 0.58
+	test_list_length: 6
+	test_size: 5000
+	train_batch: 1
+2022-07-16 10:18:38 INFO About to run command: /usr/bin/env python run.py --clip_factor=10 --clipping=False --feedback_scaling=1 --hs=50 --lr=0.001 --max_length=9 --momentum=0.9 --nonlin=sigmoid --num_cycles=200000 --num_letters=10 --opt=sgd --stopping_criteria=0.58 --test_list_length=6 --test_size=5000 --train_batch=1
+2022-07-16 10:18:43 INFO Running runs: ['lbyq08z2']
+2022-07-16 10:18:43 INFO Cleaning up finished run: lbyq08z2
+2022-07-16 10:18:43 INFO Agent received command: run
+2022-07-16 10:18:43 INFO Agent starting run with config:
+	clip_factor: 10
+	clipping: False
+	feedback_scaling: 1
+	hs: 50
+	lr: 0.01
+	max_length: 9
+	momentum: 0
+	nonlin: sigmoid
+	num_cycles: 200000
+	num_letters: 10
+	opt: sgd
+	stopping_criteria: 0.58
+	test_list_length: 6
+	test_size: 5000
+	train_batch: 1
+2022-07-16 10:18:43 INFO About to run command: /usr/bin/env python run.py --clip_factor=10 --clipping=False --feedback_scaling=1 --hs=50 --lr=0.01 --max_length=9 --momentum=0 --nonlin=sigmoid --num_cycles=200000 --num_letters=10 --opt=sgd --stopping_criteria=0.58 --test_list_length=6 --test_size=5000 --train_batch=1
+2022-07-16 10:18:48 INFO Running runs: ['nf3a9doi']
+2022-07-16 10:18:48 ERROR Detected 3 failed runs in the first 60 seconds, shutting down.
+2022-07-16 10:18:48 INFO To disable this check set WANDB_AGENT_DISABLE_FLAPPING=true
+2022-07-16 16:43:47 INFO Running runs: []
+2022-07-16 16:43:47 INFO Agent received command: run
+2022-07-16 16:43:47 INFO Agent starting run with config:
+	hs: 50
+2022-07-16 16:43:47 INFO About to run command: /usr/bin/env python run.py --hs=50
+2022-07-16 16:43:52 INFO Running runs: ['tf3x19fh']
+2022-07-16 16:43:52 INFO Cleaning up finished run: tf3x19fh
+2022-07-16 16:43:52 INFO Agent received command: run
+2022-07-16 16:43:52 INFO Agent starting run with config:
+	hs: 100
+2022-07-16 16:43:52 INFO About to run command: /usr/bin/env python run.py --hs=100
+2022-07-16 16:51:40 INFO Running runs: []
+2022-07-16 16:51:40 INFO Agent received command: run
+2022-07-16 16:51:40 INFO Agent starting run with config:
+	hs: 300
+2022-07-16 16:51:40 INFO About to run command: /usr/bin/env python run.py --hs=300
+2022-07-16 16:51:59 INFO Running runs: []
+2022-07-16 16:53:26 ERROR 400 response executing GraphQL.
+2022-07-16 16:53:26 ERROR {"errors":[{"message":"Sweep ebrahimfeghhi/serial_recall_RNNs/7ct7j5vl is not running","path":["createAgent"]}],"data":{"createAgent":null}}
+2022-07-16 16:53:26 ERROR Traceback (most recent call last):
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 108, in __call__
+    result = self._call_fn(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 158, in execute
+    return self.client.execute(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 52, in execute
+    result = self._get_result(document, *args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/client.py", line 60, in _get_result
+    return self.transport.execute(document, *args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/vendor/gql-0.2.0/wandb_gql/transport/requests.py", line 39, in execute
+    request.raise_for_status()
+  File "/usr/lib/python3/dist-packages/requests/models.py", line 940, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://api.wandb.ai/graphql
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/apis/normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1761, in register_agent
+    response = self.gql(
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 124, in __call__
+    if not check_retry_fn(e):
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1759, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.UsageError: Sweep ebrahimfeghhi/serial_recall_RNNs/7ct7j5vl is not running
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/cli/cli.py", line 97, in wrapper
+    return func(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/cli/cli.py", line 1288, in agent
+    wandb_agent.agent(sweep_id, entity=entity, project=project, count=count)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/wandb_agent.py", line 606, in agent
+    return run_agent(
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/wandb_agent.py", line 548, in run_agent
+    agent.run()
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/wandb_agent.py", line 192, in run
+    agent = self._api.register_agent(socket.gethostname(), sweep_id=self._sweep_id)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/apis/internal.py", line 123, in register_agent
+    return self.api.register_agent(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/apis/normalize.py", line 61, in wrapper
+    raise CommError(message, err).with_traceback(sys.exc_info()[2])
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/apis/normalize.py", line 25, in wrapper
+    return func(*args, **kwargs)
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1761, in register_agent
+    response = self.gql(
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/lib/retry.py", line 124, in __call__
+    if not check_retry_fn(e):
+  File "/home3/ebrahim/.local/lib/python3.8/site-packages/wandb/sdk/internal/internal_api.py", line 1759, in no_retry_4xx
+    raise UsageError(body["errors"][0]["message"])
+wandb.errors.CommError: Sweep ebrahimfeghhi/serial_recall_RNNs/7ct7j5vl is not running
+
+2022-07-16 16:59:39 INFO Running runs: []
+2022-07-16 16:59:39 INFO Agent received command: run
+2022-07-16 16:59:39 INFO Agent starting run with config:
+	hs: 50
+2022-07-16 16:59:39 INFO About to run command: /usr/bin/env python run.py --hs=50
+2022-07-16 16:59:44 INFO Running runs: ['qqycn40x']
+2022-07-16 16:59:44 INFO Cleaning up finished run: qqycn40x
+2022-07-16 16:59:44 INFO Agent received command: run
+2022-07-16 16:59:44 INFO Agent starting run with config:
+	hs: 100
+2022-07-16 16:59:44 INFO About to run command: /usr/bin/env python run.py --hs=100
+2022-07-16 16:59:49 INFO Running runs: ['nmr0x8o4']
+2022-07-16 16:59:49 INFO Cleaning up finished run: nmr0x8o4
+2022-07-16 16:59:50 INFO Agent received command: run
+2022-07-16 16:59:50 INFO Agent starting run with config:
+	hs: 300
+2022-07-16 16:59:50 INFO About to run command: /usr/bin/env python run.py --hs=300
+2022-07-16 16:59:55 INFO Running runs: ['t7ad8mrd']
+2022-07-16 16:59:55 ERROR Detected 3 failed runs in the first 60 seconds, shutting down.
+2022-07-16 16:59:55 INFO To disable this check set WANDB_AGENT_DISABLE_FLAPPING=true
+2022-07-16 17:05:31 INFO Running runs: []
+2022-07-16 17:05:31 INFO Agent received command: run
+2022-07-16 17:05:31 INFO Agent starting run with config:
+	hs: 50
+2022-07-16 17:05:31 INFO About to run command: /usr/bin/env python run.py --hs=50
+2022-07-16 17:05:36 INFO Running runs: ['mexs8b20']
+2022-07-16 17:05:36 INFO Cleaning up finished run: mexs8b20
+2022-07-16 17:05:36 INFO Agent received command: run
+2022-07-16 17:05:36 INFO Agent starting run with config:
+	hs: 100
+2022-07-16 17:05:36 INFO About to run command: /usr/bin/env python run.py --hs=100
