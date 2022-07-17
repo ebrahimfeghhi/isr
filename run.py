@@ -8,6 +8,14 @@ torch.set_num_threads(4)
 import wandb
 from simulation_one import simulation_one
 device = torch.device("cuda:0")
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument('hs', type=int, default=200,
+                    help="hidden_size")
+
+args = parser.parse_args()
+hs = args.rn
 
 def train_loop(settings, checkpoint_epoch=10000):
 
@@ -115,7 +123,7 @@ settings = {
     'train_batch': 1,
     'test_size': 5000,
     'num_letters': 11,
-    'hs': 200,
+    'hs': hs,
     'lr': 0.001,
     'stopping_criteria': 0.58,
     'feedback_scaling': 1.0,
