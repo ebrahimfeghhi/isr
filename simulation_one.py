@@ -8,17 +8,8 @@ from torch.utils.data import DataLoader
 torch.set_num_threads(2)
 import pandas as pd
 import seaborn as sns
-import os
-import pickle
 from RNNcell import RNN_one_layer
-import argparse
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--rn', type=str, 
-                    help="run number corresponding to model used for analyses")
-
-args = parser.parse_args()
-run_number = args.rn
 
 class simulation_one():
 

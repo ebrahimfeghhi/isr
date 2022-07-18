@@ -11,11 +11,17 @@ device = torch.device("cuda:0")
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument('hs', type=int, default=200,
+parser.add_argument('--hs', type=int, default=200,
                     help="hidden_size")
-
+parser.add_argument('--lr', type=float, default=0.001,
+                    help="learning_rate")
+parser.add_argument('--momentum', type=float, default=0.0,
+                    help="momentum")
+                    
 args = parser.parse_args()
-hs = args.rn
+hs = args.hs
+lr = args.lr
+momentum = args.momentum
 
 def train_loop(settings, checkpoint_epoch=10000):
 
@@ -124,11 +130,11 @@ settings = {
     'test_size': 5000,
     'num_letters': 11,
     'hs': hs,
-    'lr': 0.001,
+    'lr': lr,
     'stopping_criteria': 0.58,
     'feedback_scaling': 1.0,
     'opt': 'SGD',
-    'momentum': 0,
+    'momentum': momentum,
     'nonlin': 'sigmoid',
     'clipping': False, 
     'clip_factor': 10
